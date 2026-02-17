@@ -16,7 +16,7 @@ spec:
         app: spring-boot-sample
     spec:
       imagePullSecrets:
-        - name: har-pull-secret
+        - name: {{.Values.imagePullSecretName}}
       containers:
         - name: spring-boot-sample
           image: {{.Values.image}}
