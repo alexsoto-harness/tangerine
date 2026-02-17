@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring_boot_sample
+  labels:
+    app: spring_boot_sample
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: spring_boot_sample
+  template:
+    metadata:
+      labels:
+        app: spring_boot_sample
+    spec:
+      containers:
+        - name: spring_boot_sample
+          image: docker.io/alexsotoharness/spring_boot_sample:latest
+          ports:
+            - containerPort: 8080
