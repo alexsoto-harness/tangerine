@@ -17,7 +17,7 @@ public class HelloController {
                "</head>" +
                "<body>" +
                "<h1>Welcome to the " + projectName + " application!</h1>" +
-               "<p>This application was scaffolded and built with the <strong>Harness Internal Developer Portal</strong>.</p>" +
+               "<p>This application was built and deployed with <strong>Harness</strong>.</p>" +
                "<h2>Project Details</h2>" +
                "<ul>" +
                "<li><strong>Project Name:</strong> " + projectName + "</li>" +
