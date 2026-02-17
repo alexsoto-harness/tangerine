@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: spring_boot_sample
-          image: docker.io/alexsotoharness/spring_boot_sample:latest
+          image: <+artifact.image>
           ports:
             - containerPort: 8080
