@@ -1,2 +1,5 @@
 image: <+artifact.image>
 imagePullSecretName: har-pull-secret
+dockercfg: <+artifacts.primary.imagePullSecret> 
+name: <+service.name.replace("_", "-")>
+replicas: 2

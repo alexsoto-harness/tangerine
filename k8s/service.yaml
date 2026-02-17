@@ -2,10 +2,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-boot-sample-service
+  name: {{ lower .Values.name }}-service
 spec:
   selector:
-    app: spring-boot-sample
+    app: {{ lower .Values.name }}
   ports:
     - protocol: TCP
       port: 80
