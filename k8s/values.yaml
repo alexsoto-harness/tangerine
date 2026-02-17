@@ -1,2 +1,2 @@
 image: <+artifact.image>
-imagePullSecretName: <+artifact.imagePullSecret>
+imagePullSecretName: har-pull-secret
