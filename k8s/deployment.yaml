@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: spring-boot-sample
-          image: <+artifact.image>
+          image: {{.Values.image}}
           ports:
             - containerPort: 8080
