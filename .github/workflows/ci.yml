@@ -47,19 +47,32 @@ jobs:
           docker build -t docker.io/$DOCKERHUB_USERNAME/$PROJECT_NAME:latest .
           docker push docker.io/$DOCKERHUB_USERNAME/$PROJECT_NAME:latest
 
-      - name: Run Snyk Docker scan
-        uses: snyk/actions/docker@master
-        continue-on-error: true
-        with:
-          image: docker.io/$DOCKERHUB_USERNAME/$PROJECT_NAME:latest
-          args: --org=${{ env.SNYK_ORG }}
-      
+      - name: Install Snyk CLI
+        run: npm install -g snyk
+
+      - name: Run Snyk Docker scan and export SARIF
+        run: |
+          snyk container test docker.io/$DOCKERHUB_USERNAME/$PROJECT_NAME:latest \
+            --org=${{ env.SNYK_ORG }} \
+            --sarif-file-output=security-scans/snyk-container-scan.sarif \
+            || true
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
       - name: Snyk monitor (save results to dashboard)
-        uses: snyk/actions/docker@master
-        with:
-          image: docker.io/$DOCKERHUB_USERNAME/$PROJECT_NAME:latest
-          command: monitor
-          args: --org=${{ env.SNYK_ORG }}
+        run: |
+          snyk container monitor docker.io/$DOCKERHUB_USERNAME/$PROJECT_NAME:latest \
+            --org=${{ env.SNYK_ORG }}
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+      - name: Commit scan results
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add security-scans/
+          git diff --staged --quiet || git commit -m "Update Snyk scan results [skip ci]"
+          git push
 
 #      - name: Set up GCloud auth
 #        uses: google-github-actions/auth@v2
