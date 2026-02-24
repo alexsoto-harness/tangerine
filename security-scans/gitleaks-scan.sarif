@@ -1263,6 +1263,74 @@
    "results": [
     {
      "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 2f33295b88f7151decbb3ebd32b465f199edc52c."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1315,
+         "startColumn": 21,
+         "endLine": 1315,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "2f33295b88f7151decbb3ebd32b465f199edc52c",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-24T02:07:26Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 2f33295b88f7151decbb3ebd32b465f199edc52c."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1281,
+         "startColumn": 21,
+         "endLine": 1281,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "2f33295b88f7151decbb3ebd32b465f199edc52c",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-24T02:07:26Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
       "text": "aws-access-token has detected secret for file src/main/java/com/harness/HelloController.java at commit b4145ba23ba7333a3a457b9bd1c992840809b5aa."
      },
      "ruleId": "aws-access-token",
