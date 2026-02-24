@@ -8,7 +8,7 @@ public class HelloController {
 
     @GetMapping("/")
     public String home() {
-        String projectName = "Spring Boot Sample";
+        String projectName = "Tangerine Spring Boot Sample";
         String projectDescription = "A Spring Boot microservice";
 
         return "<html>" +
