@@ -47,16 +47,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Run Gitleaks scan
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITLEAKS_ENABLE_COMMENTS: false
-        continue-on-error: true
-
-      - name: Copy Gitleaks SARIF to security-scans
+      - name: Run Gitleaks scan (full history)
         run: |
-          cp results.sarif security-scans/gitleaks-scan.sarif
+          docker run --rm -v $(pwd):/repo zricethezav/gitleaks:latest detect \
+            --source /repo \
+            --report-format sarif \
+            --report-path /repo/security-scans/gitleaks-scan.sarif \
+            --exit-code 0 \
+            --log-opts="--all"
 
       - name: Install Snyk CLI
         run: npm install -g snyk
