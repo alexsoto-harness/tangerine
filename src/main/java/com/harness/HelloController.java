@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     // TODO: Remove this before production - test secret for Gitleaks
-    private static final String AWS_ACCESS_KEY_ID = "AKIAZ7FAKE9TESTKEYID";
-    private static final String AWS_SECRET_KEY = "wJalrXUtnFEMI7FAKE9bPxRfiCYSECRETKEY1234";
+    private static final String GITHUB_TOKEN = "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
     @GetMapping("/")
     public String home() {

@@ -54,13 +54,9 @@ jobs:
           GITLEAKS_ENABLE_COMMENTS: false
         continue-on-error: true
 
-      - name: Export Gitleaks results to SARIF
+      - name: Copy Gitleaks SARIF to security-scans
         run: |
-          docker run --rm -v $(pwd):/repo zricethezav/gitleaks:latest detect \
-            --source /repo \
-            --report-format sarif \
-            --report-path /repo/security-scans/gitleaks-scan.sarif \
-            --exit-code 0
+          cp results.sarif security-scans/gitleaks-scan.sarif
 
       - name: Install Snyk CLI
         run: npm install -g snyk
