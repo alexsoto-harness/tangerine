@@ -1,0 +1,2836 @@
+{
+  "$schema": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/schemas/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Snyk Container",
+          "semanticVersion": "1.1302.1",
+          "version": "1.1302.1",
+          "informationUri": "https://docs.snyk.io/",
+          "properties": {
+            "artifactsScanned": 77
+          },
+          "rules": []
+        }
+      },
+      "results": [],
+      "automationDetails": {
+        "id": "Snyk/Container/docker-image|docker.io/alexsotoharness/tangerine-spring-boot-sample/2026-02-24T01:12:02.375Z"
+      }
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "Snyk Container",
+          "semanticVersion": "1.1302.1",
+          "version": "1.1302.1",
+          "informationUri": "https://docs.snyk.io/",
+          "properties": {
+            "artifactsScanned": 38
+          },
+          "rules": [
+            {
+              "id": "SNYK-JAVA-CHQOSLOGBACK-13169722",
+              "shortDescription": {
+                "text": "Medium severity - External Initialization of Trusted Variables or Data Stores vulnerability in ch.qos.logback:logback-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-11226) ch.qos.logback:logback-core@1.4.14"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[ch.qos.logback:logback-core](https://mvnrepository.com/artifact/ch.qos.logback/logback-core) is a logback-core module.\n\nAffected versions of this package are vulnerable to External Initialization of Trusted Variables or Data Stores via the conditional processing of the `logback.xml` configuration file when both the Janino library and Spring Framework are present on the class path. An attacker can execute arbitrary code by compromising an existing configuration file or injecting a malicious environment variable before program execution. This is only exploitable if the attacker has write access to a configuration file or can set a malicious environment variable.\n## Remediation\nUpgrade `ch.qos.logback:logback-core` to version 1.3.16, 1.5.19 or higher.\n## References\n- [GitHub Commit](https://github.com/qos-ch/logback/commit/61f6a2544f36b3016e0efd434ee21f19269f1df7)\n- [Release Notes](https://logback.qos.ch/news.html#1.3.16)\n- [Release Notes](https://logback.qos.ch/news.html#1.5.19)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-454",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 5.9,
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-CHQOSLOGBACK-15062482",
+              "shortDescription": {
+                "text": "Low severity - External Initialization of Trusted Variables or Data Stores vulnerability in ch.qos.logback:logback-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2026-1225) ch.qos.logback:logback-core@1.4.14"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[ch.qos.logback:logback-core](https://mvnrepository.com/artifact/ch.qos.logback/logback-core) is a logback-core module.\n\nAffected versions of this package are vulnerable to External Initialization of Trusted Variables or Data Stores during the configuration file processing. An attacker can instantiate arbitrary classes already present on the class path by compromising an existing configuration file.\n## Remediation\nUpgrade `ch.qos.logback:logback-core` to version 1.5.25 or higher.\n## References\n- [GitHub Commit](https://github.com/qos-ch/logback/commit/1f97ae1844b1be8486e4e9cade98d7123d3eded5)\n- [GitHub Issue](https://github.com/qos-ch/logback/issues/997)\n- [Logback Release Notes](https://logback.qos.ch/news.html#1.5.25)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-454",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 1.8,
+                "security-severity": "1.8"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-CHQOSLOGBACK-8539865",
+              "shortDescription": {
+                "text": "Low severity - Server-side Request Forgery (SSRF) vulnerability in ch.qos.logback:logback-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2024-12801) ch.qos.logback:logback-core@1.4.14"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[ch.qos.logback:logback-core](https://mvnrepository.com/artifact/ch.qos.logback/logback-core) is a logback-core module.\n\nAffected versions of this package are vulnerable to Server-side Request Forgery (SSRF) through the `SaxEventRecorder` process. An attacker can forge requests by compromising logback configuration files in XML.\n## Remediation\nUpgrade `ch.qos.logback:logback-core` to version 1.3.15, 1.5.13 or higher.\n## References\n- [Additional Information](https://logback.qos.ch/news.html#1.5.13)\n- [GitHub Commit](https://github.com/qos-ch/logback/commit/2863a4974a3649b5b00d4a529ee6ff2063470f35)\n- [GitHub Commit](https://github.com/qos-ch/logback/commit/5f05041cba4c4ac0a62748c5c527a2da48999f2d)\n- [Release Notes](https://logback.qos.ch/news.html#1.3.15)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-918",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 2.4,
+                "security-severity": "2.4"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-CHQOSLOGBACK-8539866",
+              "shortDescription": {
+                "text": "Medium severity - Improper Neutralization of Special Elements vulnerability in ch.qos.logback:logback-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2024-12798) ch.qos.logback:logback-core@1.4.14"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[ch.qos.logback:logback-core](https://mvnrepository.com/artifact/ch.qos.logback/logback-core) is a logback-core module.\n\nAffected versions of this package are vulnerable to Improper Neutralization of Special Elements via the `JaninoEventEvaluator` extension. An attacker can execute arbitrary code by compromising an existing logback configuration file or injecting an environment variable before program execution.\n## Remediation\nUpgrade `ch.qos.logback:logback-core` to version 1.3.15, 1.5.13 or higher.\n## References\n- [Additional Information](https://logback.qos.ch/news.html#1.5.13)\n- [GitHub Commit](https://github.com/qos-ch/logback/commit/2cb6d520df7592ef1c3a198f1b5df3c10c93e183)\n- [GitHub Commit](https://github.com/qos-ch/logback/commit/b44b940cc7d4839e06e31a7d60dca174b99c1aa5)\n- [Release Notes](https://logback.qos.ch/news.html#1.3.15)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-138",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 5.9,
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-CHQOSLOGBACK-8539867",
+              "shortDescription": {
+                "text": "Medium severity - Improper Neutralization of Special Elements vulnerability in ch.qos.logback:logback-classic"
+              },
+              "fullDescription": {
+                "text": "(CVE-2024-12798) ch.qos.logback:logback-classic@1.4.14"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[ch.qos.logback:logback-classic](https://mvnrepository.com/artifact/ch.qos.logback/logback-classic) is a reliable, generic, fast and flexible logging library for Java.\n\nAffected versions of this package are vulnerable to Improper Neutralization of Special Elements via the `JaninoEventEvaluator` extension. An attacker can execute arbitrary code by compromising an existing logback configuration file or injecting an environment variable before program execution.\n## Remediation\nUpgrade `ch.qos.logback:logback-classic` to version 1.3.15, 1.5.13 or higher.\n## References\n- [Additional Information](https://logback.qos.ch/news.html#1.5.13)\n- [GitHub Commit](https://github.com/qos-ch/logback/commit/2cb6d520df7592ef1c3a198f1b5df3c10c93e183)\n- [GitHub Commit](https://github.com/qos-ch/logback/commit/b44b940cc7d4839e06e31a7d60dca174b99c1aa5)\n- [Release Notes](https://logback.qos.ch/news.html#1.3.15)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-138",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 5.9,
+                "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-10264469",
+              "shortDescription": {
+                "text": "Medium severity - Improper Handling of Case Sensitivity vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-46701) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Improper Handling of Case Sensitivity in the `pathInfo` component of a URI mapped to the CGI servlet. An attacker can bypass security constraints that apply to the `pathInfo` component by exploiting this vulnerability on a case insensitive file system.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.105, 10.1.41, 11.0.7 or higher.\n## References\n- [Apache Advisory](https://lists.apache.org/thread/xhqqk9w5q45srcdqhogdk04lhdscv30j)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.41)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.7)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.105)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/0f01966eb60015d975525019e12a087f05ebf01a)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/238d2aa54b99f91d1111467e2237d2244c64e558)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/2c6800111e7d8d8d5403c07978ea9bff3db5a5a5)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/8cb95ff03221067c511b3fa66d4f745bc4b0a605)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/8df00018a252baa9497615d6420fb6c10466fa74)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/fab7247d2f0e3a29d5daef565f829f383e10e5e2)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-178",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 6.3,
+                "security-severity": "6.3"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-10365122",
+              "shortDescription": {
+                "text": "High severity - Allocation of Resources Without Limits or Throttling vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-48988) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling due to the uniform handling of request parameters and parts in multipart requests. An attacker can craft a malicious request with a large number of parts, which can lead to a Denial of Service.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.106, 10.1.42, 11.0.8 or higher.\n## References\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-10.html)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-11.html)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-9.html)\n- [Apache Tomcat Thread](https://lists.apache.org/thread/nzkqsok8t42qofgqfmck536mtyzygp18)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/2b0ab14fb55d4edc896e5f1817f2ab76f714ae5e)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/cdde8e655bc1c5c60a07efd216251d77c52fd7f6)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/ee8042ffce4cb9324dfd79efda5984f37bbb6910)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-770",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 8.7,
+                "security-severity": "8.7"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-10365310",
+              "shortDescription": {
+                "text": "Medium severity - Authentication Bypass Using an Alternate Path or Channel vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-49125) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Authentication Bypass Using an Alternate Path or Channel due to how `PreResources` or `PostResources` handle pre-resources or post-resources mounted at non-root locations. An attacker can gain unauthorized access to protected resources by crafting requests to unexpected paths that bypass intended security constraints.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.106, 10.1.42, 11.0.8 or higher.\n## References\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-10.html)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-11.html)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-9.html)\n- [Apache Tomcat Thread](https://lists.apache.org/thread/m66cytbfrty9k7dc4cg6tl1czhsnbywk)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/7617b9c247bc77ed0444dd69adcd8aa48777886c)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/9418e3ff9f1f4c006b4661311ae9376c52d162b9)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/d94bd36fb7eb32e790dae0339bc249069649a637)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-288",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 6.3,
+                "security-severity": "6.3"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-10674391",
+              "shortDescription": {
+                "text": "High severity - Integer Overflow or Wraparound vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-52520) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Integer Overflow or Wraparound via file uploads through servlet containers. An attacker can craft malicious multipart/form-data requests with specially crafted Content-Length headers that trigger integer overflow vulnerabilities, potentially bypassing file size restrictions and causing memory exhaustion.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.107, 10.1.43, 11.0.9 or higher.\n## References\n- [Apache Advisory](https://lists.apache.org/thread/trqq01bbxw6c92zx69kx2mw2qgmfy0o5)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-9.html)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/927d66fbc294cb65242102b817a45fd80834e040)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-190",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 8.7,
+                "security-severity": "8.7"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-10676855",
+              "shortDescription": {
+                "text": "High severity - Allocation of Resources Without Limits or Throttling vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-53506) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling via HTTP/2 multiplexing feature. an attacker can trigger resource exhaustion by creating excessive HTTP/2 streams within a single TCP connection.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.107, 10.1.43, 11.0.9 or higher.\n## References\n- [Apache Tomcat Advisory](https://lists.apache.org/thread/p09775q0rd185m6zz98krg0fp45j8kr0)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-10.html)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-11.html)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-9.html)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/434772930f362145516dd60681134e7f0cf8115b)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-770",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 8.7,
+                "security-severity": "8.7"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-11798986",
+              "shortDescription": {
+                "text": "Medium severity - Session Fixation vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-55668) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Session Fixation via the `rewrite` valve if enabled for a web application. An attacker can gain unauthorized access to another user's session by crafting a request that allows session fixation.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.106, 10.1.42, 11.0.8 or higher.\n## References\n- [Apache Thread](https://lists.apache.org/thread/v6bknr96rl7l1qxkl1c03v0qdvbbqs47)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-10.html)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-11.html)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-9.html)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/8621e4c6ba2c916a41eb34cb0f781171ead33fb6)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/90306d971bb8b8393336d893644124fb2ca11d21)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/9c3673ba04009377cb0c81ccb6cf5078aec1aa95)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-384",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 6.9,
+                "security-severity": "6.9"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-11799152",
+              "shortDescription": {
+                "text": "High severity - Improper Resource Shutdown or Release vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-48989) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Improper Resource Shutdown or Release via the HTTP/2 Handler. An attacker can cause a denial of service by sending specially crafted requests that exploit improper handling of resource shutdown.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.108, 10.1.44, 11.0.10 or higher.\n## References\n- [Apache Thread](https://lists.apache.org/thread/9ydfg0xr0tchmglcprhxgwhj0hfwxlyf)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-10.html)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-11.html)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-9.html)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/73c04a10395774bda71a0b37802cf983662ce255)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/f362c8eb3b8ec5b7f312f7f5610731c0fb299a06)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/f36b8a4eea4ce8a0bc035079e1d259d29f5eb7bf)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-404",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 8.7,
+                "security-severity": "8.7"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-13723930",
+              "shortDescription": {
+                "text": "Medium severity - Improper Resource Shutdown or Release vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-61795) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Improper Resource Shutdown or Release due to the delayed cleaning of multipart upload temporary files. An attacker can cause a denial-of-service by sending crafted requests that create temporary copies of uploaded parts faster than the garbage collector clears them, leading to resource exhaustion.\r\n\r\n**Note:** Successful exploitation depends on the JVM settings, the application memory usage, and application load.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](https://security.snyk.io/vuln/SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.110, 10.1.47, 11.0.12 or higher.\n## References\n- [Apache Mail](https://lists.apache.org/thread/wm9mx8brmx9g4zpywm06ryrtvd3160pp)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/1cdf5f730ede75a0759492f179ac21ca4ff68e06)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/af6e9181620304c0d818121c29c074e1330610d0)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/afa422bd7ca1eef0f507259c682fd876494d9c3b)\n- [Red Hat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2406588)\n- [Vulnerability Advisory](https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.12)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-404",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 6,
+                "security-severity": "6"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-13733966",
+              "shortDescription": {
+                "text": "High severity - Relative Path Traversal vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-55752) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Relative Path Traversal via the URL normalization. An attacker can bypass security constraints and access restricted directories such as `/WEB-INF/` and `/META-INF/` by manipulating the request URI. If PUT requests are also enabled then malicious files could be uploaded leading to remote code execution.\r\n\r\n**Note:**\r\n\r\n1) Older, EOL versions may also be affected.\r\n2) PUT requests are normally limited to trusted users and it is considered unlikely that PUT requests would be enabled in conjunction with a rewrite that manipulated the URI.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.109, 10.1.45, 11.0.11 or higher.\n## References\n- [Apache Mailing List](https://lists.apache.org/thread/n05kjcwyj1s45ovs8ll1qrrojhfb1tog)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.45)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.11)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.109)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/130d36d8492ef9e4eb22952c17c92423cb35fd06)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/b5042622b8b78340ae65403c55dcb9c7416924df)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/fec06c610ed7466b401e29cc567a58aee5ed826a)\n- [PoC in GitHub](https://github.com/masahiro331/CVE-2025-55752)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-23",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 7.7,
+                "security-severity": "7.7"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-13746602",
+              "shortDescription": {
+                "text": "High severity - Untrusted Search Path vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-49124) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Untrusted Search Path via the `icacls.exe` call during Windows installation, when a full path is not specified. An attacker can execute arbitrary code with elevated privileges by placing a malicious executable in a directory that is searched before the intended system directory.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.106, 10.1.42, 11.0.8 or higher.\n## References\n- [Apache Advisory](https://lists.apache.org/thread/lnow7tt2j6hb9kcpkggx32ht6o90vqzv)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.42)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.8)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.106)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/c56456cda8151c9504dfb7985700824559d769a7)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/e0e07812224d327a321babb554f5a5758d30cc49)\n- [OSS Security Advisory](http://www.openwall.com/lists/oss-security/2025/06/16/3)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-426",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 7.5,
+                "security-severity": "7.5"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-15307781",
+              "shortDescription": {
+                "text": "High severity - Improper Certificate Validation vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-66614) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Improper Certificate Validation in the SNI extension, when client certificate authentication relies exclusively on the Connector (and is not enforced in the web application). The hostname provided via the SNI extension may be different from the hostname in the HTTP host header field.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.113, 10.1.50, 11.0.15 or higher.\n## References\n- [Apache Mailing List](https://lists.apache.org/thread/vw6lxtlh2qbqwpb61wd3sv1flm2nttw7)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/258a591b61f8cf5c22109e21e5a2a38b63454fd2)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-295",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 7.6,
+                "security-severity": "7.6"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-15307822",
+              "shortDescription": {
+                "text": "High severity - Incorrect Authorization vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2026-24734) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Incorrect Authorization when using an OCSP responder. OCSP response verification and freshness checks can be bypassed, allowing certificate revocation to be bypassed.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.114, 10.1.52, 11.0.18 or higher.\n## References\n- [Apache Mailing List](https://lists.apache.org/thread/292dlmx3fz1888v6v16221kpozq56gml)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/e76e9eaa246f30debd603726d9147a8a8cb5171c)\n- [GitHub Commit](https://github.com/apache/tomcat-native/commit/69a977dd427ad2a6da0f10aca3872386ee27f681)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-863",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 7.1,
+                "security-severity": "7.1"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-15307825",
+              "shortDescription": {
+                "text": "Low severity - Improper Authorization vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2026-24733) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Improper Authorization in `prepareRequestProtocol()`, which accepts HTTP/0.9 requests other than `GET`. A security constraint configured to allow `HEAD` requests to a URI but deny `GET` requests allows a user to bypass the constraint by sending an invalid `HEAD` request.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.113, 10.1.50, 11.0.15 or higher.\n## References\n- [Apache Mailing List](https://lists.apache.org/thread/6xk3t65qpn1myp618krtfotbjn1qt90f)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/6c73d74ff281260d74c836370ff6b82f1da8048b)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-285",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 2.3,
+                "security-severity": "2.3"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-7430175",
+              "shortDescription": {
+                "text": "High severity - Insufficient Session Expiration vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2024-34750) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Insufficient Session Expiration due to an infinite timeout being assigned to an open connection improperly, in `http2/Stream.java`. An attacker can force this situation by sending an HTTP/2 stream with excessive headers, causing an out-of-memory error or exhausting `maxConnections`.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.90, 10.1.25, 11.0.0-M21 or higher.\n## References\n- [Apache Mailing List](https://lists.apache.org/thread/4kqf0bc9gxymjc2x7v3p7dvplnl77y8l)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-10.html)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-11.html)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-9.html)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/2344a4c0d03e307ba6b8ab6dc8b894cc8bac63f2)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/2afae300c9ac9c0e516e2e9de580847d925365c3)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/9fec9a82887853402833a80b584e3762c7423f5f)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-613",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 8.7,
+                "security-severity": "8.7"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-8073090",
+              "shortDescription": {
+                "text": "High severity - Allocation of Resources Without Limits or Throttling vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2024-38286) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling via the `unwrap()` function in `SecureNio2Channel` class, during a TLS handshake. Under certain configurations using TLS 1.3, an attacker can trigger an `OutOfMemoryError`.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.90, 10.1.25, 11.0.0-M21 or higher.\n## References\n- [Apache Tomcat 10 Advisory](https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.25)\n- [Apache Tomcat 11 Advisory](https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.0-M21)\n- [Apache Tomcat 9 Advisory](https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.90)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/3197862639732e16ec1164557bcd289ebc116c93)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/3344c17cef094da4bb616f4186ed32039627b543)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/76c5cce6f0bcef14b0c21c38910371ca7d322d13)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-770",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 8.7,
+                "security-severity": "8.7"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-8383920",
+              "shortDescription": {
+                "text": "Critical severity - Uncaught Exception vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2024-52316) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Uncaught Exception due to the custom Jakarta Authentication `ServerAuthContext` component which may throw an exception during the authentication process without setting an HTTP status to indicate failure. An attacker can gain unauthorized access by exploiting this unchecked error condition.\r\n\r\n**Note:**\r\n\r\nThis is only exploitable if Tomcat is configured to use a custom Jakarta Authentication\r\n`ServerAuthContext` component that behaves in this way. According to the maintainers, no such cases are known.\n## PoC\n```python\r\nimport requests\r\n\r\n# Target server configuration\r\nTARGET_URL = \"http://example.com/login\"  # Replace with your target's authentication URL\r\nTEST_HEADERS = {\r\n    \"Content-Type\": \"application/json\"\r\n}\r\nTEST_PAYLOAD = {\r\n    \"username\": \"test_user\",  # Sample username\r\n    \"password\": \"invalid_password\"  # Invalid password for testing\r\n}\r\n\r\ndef check_cve_2024_52316(target_url):\r\n    \"\"\"\r\n    Test for CVE-2024-52316 vulnerability by sending crafted authentication requests.\r\n\r\n    Args:\r\n        target_url (str): The URL of the authentication endpoint to test.\r\n    \"\"\"\r\n    try:\r\n        print(f\"[*] Sending test request to {target_url}\")\r\n        # Send a POST request with the test payload\r\n        response = requests.post(target_url, json=TEST_PAYLOAD, headers=TEST_HEADERS, timeout=5)\r\n        \r\n        # Analyze the server's response\r\n        if response.status_code in [401, 403]:\r\n            print(f\"[SAFE] The server returned an expected HTTP status code: {response.status_code}\")\r\n        elif response.status_code == 200:\r\n            print(f\"[VULNERABLE] Potential CVE-2024-52316 detected! Server returned status code: {response.status_code}\")\r\n        else:\r\n            print(f\"[INFO] Unexpected HTTP status code: {response.status_code}\")\r\n            print(\"Response content:\", response.text)\r\n    except requests.exceptions.RequestException as e:\r\n        print(f\"[ERROR] Failed to connect to the target: {e}\")\r\n\r\nif __name__ == \"__main__\":\r\n    print(\"[START] CVE-2024-52316 Detection Script\")\r\n    check_cve_2024_52316(TARGET_URL)\r\n```\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.96, 10.1.31, 11.0.0 or higher.\n## References\n- [Apache Advisory](https://lists.apache.org/thread/lopzlqh91jj9n334g02om08sbysdb928)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/6d097a66746635df6880fe7662a792156b0eca14)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/7532f9dc4a8c37ec958f79dc82c4924a6c539223)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/acc2f01395f895980f5d8a64573fcc1bade13369)\n- [PoC](http://github.com/TAM-K592/CVE-2024-52316)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-248",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 9.2,
+                "security-severity": "9.2"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-8523186",
+              "shortDescription": {
+                "text": "Critical severity - Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2024-50379) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Time-of-check Time-of-use (TOCTOU) Race Condition. On case insensitive file systems, when the default servlet is write-enabled, an attacker can upload a malicious file containing executable code and bypass case sensitivity checks, causing it to be treated as a JSP and executed.\r\n\r\nThis vector has been observed when the application is under load and read and upload operations are performed on the same file simultaneously.\r\n\r\n**Note:**\r\n\r\nThe default `readonly` initialization parameter value of `true` is not vulnerable.\r\n\r\nThis is related to [CVE-2024-56337](https://security.snyk.io/vuln/SNYK-JAVA-ORGAPACHETOMCAT-8547998) where additional configurations are defined to fully mitigate this issue as upgrading to the fixed version doesn't fully mitigate this vulnerability;\r\n\r\nIn addition to upgrading to the fixed version, users are advised to apply the following mitigations, depending on which version of Java they are using with Tomcat :\r\n\r\n1) running on Java 8 or Java 11: the system property `sun.io.useCanonCaches` must be explicitly set to false (it defaults\r\nto true)\r\n\r\n2) running on Java 17: the system property `sun.io.useCanonCaches`, if set, must be set to false (it defaults to false)\r\n\r\n3) running on Java 21 onwards: no further configuration is required (the system property and the problematic cache have been removed)\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.98, 10.1.34, 11.0.2 or higher.\n## References\n- [Apache Advisory](https://lists.apache.org/thread/y6lj6q1xnp822g6ro70tn19sgtjmr80r)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.34)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.2)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.98)\n- [Blog Post](https://medium.com/@patelvidhi4288/deep-dive-poc-of-cve-2024-50379-exploit-tomcat-vulnerability-9-8-severity-776cfcfcf3ed)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/05ddeeaa54df1e2dc427d0164bedd6b79f78d81f)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/43b507ebac9d268b1ea3d908e296cc6e46795c00)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/631500b0c9b2a2a2abb707e3de2e10a5936e5d41)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/684247ae85fa633b9197b32391de59fc54703842)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/8554f6b1722b33a2ce8b0a3fad37825f3a75f2d2)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/cc7a98b57c6dc1df21979fcff94a36e068f4456c)\n- [PoC in GitHub](https://github.com/iSee857/CVE-2024-50379-PoC)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-367",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 9.2,
+                "security-severity": "9.2"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-8547999",
+              "shortDescription": {
+                "text": "Critical severity - Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2024-56337) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Time-of-check Time-of-use (TOCTOU) Race Condition due to imcomplete mitigation advice associated with [CVE-2024-50379](https://security.snyk.io/vuln/SNYK-JAVA-ORGAPACHETOMCAT-8523184) in the file-handling process with servlet write enabled.\r\n\r\nIn addition to upgrading to the fixed version, users are advised to apply the following mitigations, depending on which version of Java they are using with Tomcat :\r\n\r\n1) running on Java 8 or Java 11: the system property `sun.io.useCanonCaches` must be explicitly set to false (it defaults to true)\r\n\r\n2) running on Java 17: the system property `sun.io.useCanonCaches`, if set, must be set to false (it defaults to false)\r\n\r\n3) running on Java 21 onwards: no further configuration is required (the system property and the problematic cache have been removed)\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.98, 10.1.34, 11.0.2 or higher.\n## References\n- [Additional Protection](https://github.com/apache/tomcat/commit/0c75cd1e3ac85944fb8ecbcf88cc38e9fa1fe4d5)\n- [Apache Thread](https://lists.apache.org/thread/b2b9qrgjrz1kvo4ym8y2wkfdvwoq6qbp)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.34)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.2)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.98)\n- [Follow-up PR](https://github.com/apache/tomcat/pull/858)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/43b507ebac9d268b1ea3d908e296cc6e46795c00)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/631500b0c9b2a2a2abb707e3de2e10a5936e5d41)\n- [PoC](https://github.com/SleepingBag945/CVE-2024-50379)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-367",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 9.2,
+                "security-severity": "9.2"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-9396739",
+              "shortDescription": {
+                "text": "High severity - Path Equivalence vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-24813) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Path Equivalence in the `doPut()` function in `DefaultServlet.java`, which insecurely replaces path separators with `.`s. \r\n\r\nIf the Default Servlet is configured with writes enabled - which it is not by default - a user can exploit Tomcat's partial `PUT` functionality to achieve code execution via deserialization. The target URL containing sensitive uploaded files must be a sub-directory of a target URL for public uploads, and the malicious user must know the names of the target sensitive files, which are also uploaded using a partial `PUT`. If both attacker and target application are using the default storage location and it contains a library that deserializes untrusted code, the attacker can trigger the execution of malicious code.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.99, 10.1.35, 11.0.3 or higher.\n## References\n- [GitHub Commit](https://github.com/apache/tomcat/commit/0a668e0c27f2b7ca0cc7c6eea32253b9b5ecb29c)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/eb61aade8f8daccaecabf07d428b877975622f72)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/f6c01d6577cf9a1e06792be47e623d36acc3b5dc)\n- [OSS Security Advisory](http://www.openwall.com/lists/oss-security/2025/03/10/5)\n- [PoC](https://github.com/iSee857/CVE-2025-24813-PoC/blob/main/Tomcat_CVE-2025-24813_RCE.py)\n- [Nuclei Templates](https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2025/CVE-2025-24813.yaml)\n- [CISA - Known Exploited Vulnerabilities](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)\n- [Exploit DB](https://www.exploit-db.com/exploits/52134)\n- [PoC in GitHub](https://github.com/qzy0x/cve-2025-24813_poc)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-44",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 7.7,
+                "security-severity": "7.7"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-9905132",
+              "shortDescription": {
+                "text": "High severity - Improper Cleanup on Thrown Exception vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-31650) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Improper Cleanup on Thrown Exception when handling failed HTTP/2 requests with certain invalid HTTP priority headers. An attacker can trigger an `OutOfMemoryException` by sending a large number of malicious requests.\r\n\r\n**Note:** The project maintainers note that version 9.0.103 also fixes the vulnerability but was never officially released.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.104, 10.1.40, 11.0.6 or higher.\n## References\n- [Apache Mailing List](https://lists.apache.org/thread/j6zzk0y3yym9pzfzkq5vcyxzz0yzh826)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-10.html)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-11.html)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-9.html)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/1eef1dc459c45f1e421d8bd25ef340fc1cc34edc)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/40ae788c2e64d018b4e58cd4210bb96434d0100d)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/75554da2fc5574862510ae6f0d7b3d78937f1d40)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/8cc3b8fb3f2d8d4d6a757e014f19d1fafa948a60)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/b7674782679e1514a0d154166b1d04d38aaac4a9)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/b98e74f517b36929f4208506e5adad22cb767baa)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/cba1a0fe1289ee7f5dd46c61c38d1e1ac5437bff)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/ded0285b96b4d3f5560dfc8856ad5ec4a9b50ba9)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/f619e6a05029538886d5a9d987925d573b5bb8c2)\n- [OSS Security Advisory](http://www.openwall.com/lists/oss-security/2025/04/28/2)\n- [PoC](https://github.com/nomi-sec/PoC-in-GitHub/tree/master/2025/CVE-2025-31650.json)\n- [Exploit DB](https://www.exploit-db.com/exploits/52318)\n- [PoC in GitHub](https://github.com/absholi7ly/TomcatKiller-CVE-2025-31650)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-460",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 8.7,
+                "security-severity": "8.7"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-9905136",
+              "shortDescription": {
+                "text": "Medium severity - Improper Neutralization vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-31651) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.apache.tomcat.embed:tomcat-embed-core](https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core) is a Core Tomcat implementation.\n\nAffected versions of this package are vulnerable to Improper Neutralization in the `RewriteValve` class, which handles rewrite rules. If rewrite rules are configured to enforce security constraints, those security constraints can be bypassed in some cases by sending a malicious request involving `;` or `?` characters.\r\n\r\n**Note:** The project maintainers note that version 9.0.103 also fixes the vulnerability but was never officially released.\n## Remediation\nUpgrade `org.apache.tomcat.embed:tomcat-embed-core` to version 9.0.104, 10.1.40, 11.0.6 or higher.\n## References\n- [Apache Mailing List](https://lists.apache.org/thread/cpklvqwvdrp4k9hmd2l3q33j0gzy4fox)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-10.html)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-11.html)\n- [Apache Tomcat Advisory](https://tomcat.apache.org/security-9.html)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/066bf6b6a15a4e7e0941d4acf096841165b97098)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/175dc75fc428930034a6c93fb52f830d955d8e64)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/ee3ab548e92345eca0cbd1f01649eb36c6f29454)\n- [GitHub Commit](https://github.com/apache/tomcat/commit/fbecc915a10c5a3d634c5e2c6ced4ff479ce9953)\n- [OSS Security Advisory](http://www.openwall.com/lists/oss-security/2025/04/28/3)\n- [PoC](https://github.com/nomi-sec/PoC-in-GitHub/tree/master/2025/CVE-2025-31651.json)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-150",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 6.3,
+                "security-severity": "6.3"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORK-10176071",
+              "shortDescription": {
+                "text": "Low severity - Improper Handling of Case Sensitivity vulnerability in org.springframework:spring-context"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-22233) org.springframework:spring-context@6.1.6"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n\nAffected versions of this package are vulnerable to Improper Handling of Case Sensitivity due to an incomplete fix for [CVE-2024-38820](https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-8230364), where it is still possible to bypass the `disallowedFields` checks.\n\n**Note:**\n\nThis vulnerability was also fixed in commercial versions 6.0.28 and 5.3.43.\n## Remediation\nUpgrade `org.springframework:spring-context` to version 6.1.20, 6.2.7 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-framework/commit/ee62701f5634e904e42e218baad142cea2bcd332)\n- [GitHub Issue](https://github.com/spring-projects/spring-framework/issues/34801)\n- [Spring Security Advisory](https://spring.io/security/cve-2025-22233)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-178",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 2.3,
+                "security-severity": "2.3"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORK-8230364",
+              "shortDescription": {
+                "text": "Low severity - Improper Handling of Case Sensitivity vulnerability in org.springframework:spring-context"
+              },
+              "fullDescription": {
+                "text": "(CVE-2024-38820) org.springframework:spring-context@6.1.6"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n\nAffected versions of this package are vulnerable to Improper Handling of Case Sensitivity due to `String.toLowerCase()` having some Locale dependent exceptions that could potentially result in fields not protected as expected.\r\n\r\n**Note:**\r\n\r\nThe fix for [CVE-2022-22968](https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-2689634) made `disallowedFields` patterns in `DataBinder` case insensitive.\r\n\r\nThis vulnerability was also fixed in commercial versions 5.3.41 and 6.0.25.\n## Remediation\nUpgrade `org.springframework:spring-context` to version 6.1.14 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-framework/commit/23656aebc6c7d0f9faff1080981eb4d55eff296c)\n- [Spring Security Advisory](https://spring.io/security/cve-2024-38820)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-178",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 2.3,
+                "security-severity": "2.3"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORK-10345766",
+              "shortDescription": {
+                "text": "Medium severity - HTTP Response Splitting vulnerability in org.springframework:spring-web"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-41234) org.springframework:spring-web@6.1.6"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.springframework:spring-web](https://github.com/spring-projects/spring-framework) is a package that provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform.\n\nAffected versions of this package are vulnerable to HTTP Response Splitting via the `Content-Disposition` header where the `filename` parameter value could contain non-printable characters, causing parsing issues for HTTP clients. An attacker can cause the download of files containing malicious commands by injecting content into the response.\n\n**Notes:**\n\n1) This is only exploitable if the header is prepared with `org.springframework.http.ContentDisposition`, the filename is set via `ContentDisposition.Builder#filename(String, Charset)`, the value is derived from unsanitized user input, and the attacker can inject malicious content into the downloaded response.\n\n2) The vulnerability was also fixed in the 6.0.29 commercial version.\n## Remediation\nUpgrade `org.springframework:spring-web` to version 6.1.21, 6.2.8 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-framework/commit/f0e7b42704e6b33958f242d91bd690d6ef7ada9c)\n- [GitHub Issue](https://github.com/spring-projects/spring-framework/issues/35034)\n- [Spring Security Advisory](https://spring.io/security/cve-2025-41234)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-113",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 4.5,
+                "security-severity": "4.5"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORK-7687447",
+              "shortDescription": {
+                "text": "Medium severity - Denial of Service (DoS) vulnerability in org.springframework:spring-web"
+              },
+              "fullDescription": {
+                "text": "(CVE-2024-38809) org.springframework:spring-web@6.1.6"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.springframework:spring-web](https://github.com/spring-projects/spring-framework) is a package that provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform.\n\nAffected versions of this package are vulnerable to Denial of Service (DoS) in the form of improper ETag prefix validation when parsing ETags from the `If-Match` or `If-None-Match` request headers. An attacker can exploit this vulnerability to cause denial of service by sending a maliciously crafted conditional HTTP request.\r\n\r\n\r\n## Workaround\r\n\r\nUsers of older, unsupported versions could enforce a size limit on `If-Match` and `If-None-Match` headers, e.g. through a `Filter`.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](https://security.snyk.io/vuln/SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `org.springframework:spring-web` to version 5.3.38, 6.0.23, 6.1.12 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-framework/commit/bb17ad8314b81850a939fd265fb53b3361705e85)\n- [GitHub Commit](https://github.com/spring-projects/spring-framework/commit/fe4fd004291a1f2704281eb839609cf9e2fb5bea)\n- [GitHub Issue](https://github.com/spring-projects/spring-framework/issues/33372)\n- [GitHub PR](https://github.com/spring-projects/spring-framework/pull/33370)\n- [GitHub PR](https://github.com/spring-projects/spring-framework/pull/33374)\n- [Spring Security Advisory](https://spring.io/security/cve-2024-38809)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-625",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 6.9,
+                "security-severity": "6.9"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORK-8230366",
+              "shortDescription": {
+                "text": "Low severity - Improper Handling of Case Sensitivity vulnerability in org.springframework:spring-web"
+              },
+              "fullDescription": {
+                "text": "(CVE-2024-38820) org.springframework:spring-web@6.1.6"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.springframework:spring-web](https://github.com/spring-projects/spring-framework) is a package that provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform.\n\nAffected versions of this package are vulnerable to Improper Handling of Case Sensitivity due to `String.toLowerCase()` having some Locale dependent exceptions that could potentially result in fields not protected as expected.\r\n\r\n**Note:**\r\n\r\nThe fix for [CVE-2022-22968](https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-2689634) made `disallowedFields` patterns in `DataBinder` case insensitive.\r\n\r\nThis vulnerability was also fixed in commercial versions 5.3.41 and 6.0.25.\n## Remediation\nUpgrade `org.springframework:spring-web` to version 6.1.14 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-framework/commit/23656aebc6c7d0f9faff1080981eb4d55eff296c)\n- [Spring Security Advisory](https://spring.io/security/cve-2024-38820)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-178",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 2.3,
+                "security-severity": "2.3"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORK-12008931",
+              "shortDescription": {
+                "text": "High severity - Relative Path Traversal vulnerability in org.springframework:spring-beans"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-41242) org.springframework:spring-beans@6.1.6"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.springframework:spring-beans](https://www.baeldung.com/spring-bean) is a package that is the basis for Spring Framework's IoC container. The BeanFactory interface provides an advanced configuration mechanism capable of managing any type of object.\n\nAffected versions of this package are vulnerable to Relative Path Traversal when deployed on non-compliant Servlet containers. An unauthenticated attacker could gain access to files and directories outside the intended web root.\r\n\r\n**Notes:**\r\n\r\n1) This is only exploitable if the application is deployed as a WAR or with an embedded Servlet container, the Servlet container does not reject suspicious sequences and the application serves static resources with Spring resource handling.\r\n\r\n2) Applications deployed on Apache Tomcat or Eclipse Jetty are not vulnerable, as long as default security features are not disabled in the configuration.\r\n\r\n3) This vulnerability was also fixed in the commercial versions 6.1.22 and 5.3.44.\n## Remediation\nUpgrade `org.springframework:spring-beans` to version 6.2.10 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-framework/commit/3781ba223ed76823b99e9c699e0957b391e22bf9)\n- [GitHub Release](https://github.com/spring-projects/spring-framework/releases/tag/v6.2.10)\n- [Spring Release](https://spring.io/blog/2025/08/14/spring-framework-6-2-10-release-fixes-cve-2025-41242)\n- [Vendor Advisory](https://spring.io/security/cve-2025-41242)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-23",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 8.2,
+                "security-severity": "8.2"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORK-12817817",
+              "shortDescription": {
+                "text": "High severity - Incorrect Authorization vulnerability in org.springframework:spring-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-41249) org.springframework:spring-core@6.1.6"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.springframework:spring-core](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22spring-core%22) is a core package within the spring-framework that contains multiple classes and utilities.\n\nAffected versions of this package are vulnerable to Incorrect Authorization via the `AnnotationsScanner` and `AnnotatedMethod` class. An attacker can gain unauthorized access to sensitive information by exploiting improper resolution of annotations on methods within type hierarchies that use parameterized supertypes with unbounded generics.\r\n\r\n**Note:**\r\nThis is only exploitable if security annotations are used on methods in generic superclasses or generic interfaces and the `@EnableMethodSecurity` feature is enabled.\n## Remediation\nUpgrade `org.springframework:spring-core` to version 6.2.11 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-framework/commit/6d710d482a6785b069e35022e81758953afc21ff)\n- [GitHub Issue](https://github.com/spring-projects/spring-framework/issues/35342)\n- [GitHub Release](https://github.com/spring-projects/spring-framework/releases/tag/v6.2.11)\n- [Vendor Advisory](https://spring.io/security/cve-2025-41249)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-863",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 8.7,
+                "security-severity": "8.7"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORK-8230365",
+              "shortDescription": {
+                "text": "Low severity - Improper Handling of Case Sensitivity vulnerability in org.springframework:spring-core"
+              },
+              "fullDescription": {
+                "text": "(CVE-2024-38820) org.springframework:spring-core@6.1.6"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.springframework:spring-core](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22spring-core%22) is a core package within the spring-framework that contains multiple classes and utilities.\n\nAffected versions of this package are vulnerable to Improper Handling of Case Sensitivity due to `String.toLowerCase()` having some Locale dependent exceptions that could potentially result in fields not protected as expected.\r\n\r\n**Note:**\r\n\r\nThe fix for [CVE-2022-22968](https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-2689634) made `disallowedFields` patterns in `DataBinder` case insensitive.\r\n\r\nThis vulnerability was also fixed in commercial versions 5.3.41 and 6.0.25.\n## Remediation\nUpgrade `org.springframework:spring-core` to version 6.1.14 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-framework/commit/23656aebc6c7d0f9faff1080981eb4d55eff296c)\n- [Spring Security Advisory](https://spring.io/security/cve-2024-38820)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-178",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 2.3,
+                "security-severity": "2.3"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORK-7945490",
+              "shortDescription": {
+                "text": "High severity - Path Traversal vulnerability in org.springframework:spring-webmvc"
+              },
+              "fullDescription": {
+                "text": "(CVE-2024-38816) org.springframework:spring-webmvc@6.1.6"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.springframework:spring-webmvc](https://mvnrepository.com/artifact/org.springframework/spring-webmvc) is a package that provides Model-View-Controller (MVC) architecture and ready components that can be used to develop flexible and loosely coupled web applications.\n\nAffected versions of this package are vulnerable to Path Traversal via the `WebMvc.fn` and `WebFlux.fn` frameworks. An attacker can access any file on the file system that is also accessible to the process in which the Spring application is running by crafting malicious HTTP requests.\n\n**Note:**\n\nThis is only exploitable if the web application uses `RouterFunctions` to serve static resources and resource handling is explicitly configured with a `FileSystemResource` location.\n\n## Workaround\n\nThis vulnerability can be mitigated by using the Spring Security HTTP Firewall or running the application on Tomcat or Jetty.\n## Remediation\nUpgrade `org.springframework:spring-webmvc` to version 6.1.13 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-framework/commit/d86bf8b2056429edf5494456cffcb2b243331c49)\n- [Spring Security Advisory](https://spring.io/security/cve-2024-38816)\n- [Nuclei Templates](https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2024/CVE-2024-38816.yaml)\n- [PoC in GitHub](https://github.com/WULINPIN/CVE-2024-38816-PoC)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-22",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 8.7,
+                "security-severity": "8.7"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORK-8230368",
+              "shortDescription": {
+                "text": "Low severity - Improper Handling of Case Sensitivity vulnerability in org.springframework:spring-webmvc"
+              },
+              "fullDescription": {
+                "text": "(CVE-2024-38820) org.springframework:spring-webmvc@6.1.6"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.springframework:spring-webmvc](https://mvnrepository.com/artifact/org.springframework/spring-webmvc) is a package that provides Model-View-Controller (MVC) architecture and ready components that can be used to develop flexible and loosely coupled web applications.\n\nAffected versions of this package are vulnerable to Improper Handling of Case Sensitivity due to `String.toLowerCase()` having some Locale dependent exceptions that could potentially result in fields not protected as expected.\r\n\r\n**Note:**\r\n\r\nThe fix for [CVE-2022-22968](https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-2689634) made `disallowedFields` patterns in `DataBinder` case insensitive.\r\n\r\nThis vulnerability was also fixed in commercial versions 5.3.41 and 6.0.25.\n## Remediation\nUpgrade `org.springframework:spring-webmvc` to version 6.1.14 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-framework/commit/23656aebc6c7d0f9faff1080981eb4d55eff296c)\n- [Spring Security Advisory](https://spring.io/security/cve-2024-38820)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-178",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 2.3,
+                "security-severity": "2.3"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORK-8230373",
+              "shortDescription": {
+                "text": "High severity - Path Traversal vulnerability in org.springframework:spring-webmvc"
+              },
+              "fullDescription": {
+                "text": "(CVE-2024-38819) org.springframework:spring-webmvc@6.1.6"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.springframework:spring-webmvc](https://mvnrepository.com/artifact/org.springframework/spring-webmvc) is a package that provides Model-View-Controller (MVC) architecture and ready components that can be used to develop flexible and loosely coupled web applications.\n\nAffected versions of this package are vulnerable to Path Traversal through the functional web frameworks `WebMvc.fn` or `WebFlux.fn`. An attacker can craft malicious HTTP requests and obtain any file on the file system that is also accessible.\r\n\r\n**Note:**\r\nThis is similar to [CVE-2024-38816](https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-7945490), but with different input.\n## Remediation\nUpgrade `org.springframework:spring-webmvc` to version 6.1.14 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-framework/commit/fb7890d73975a3d9e0763e0926df2bd0a608e87e)\n- [Spring Security Advisory](https://spring.io/security/cve-2024-38819)\n- [PoC in GitHub](https://github.com/masa42/CVE-2024-38819-POC)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-23",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 8.7,
+                "security-severity": "8.7"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORKBOOT-9804539",
+              "shortDescription": {
+                "text": "Medium severity - Improper Input Validation vulnerability in org.springframework.boot:spring-boot-actuator-autoconfigure"
+              },
+              "fullDescription": {
+                "text": "(CVE-2025-22235) org.springframework.boot:spring-boot-actuator-autoconfigure@3.2.5"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n\nAffected versions of this package are vulnerable to Improper Input Validation via the `EndpointRequest.to()` function that creates a matcher for `null/**` if the actuator endpoint, for which the `EndpointRequest` has been created, is disabled or not exposed.\r\n\r\n**Note:**\r\n\r\nThis is only exploitable if all of the following conditions are met:\r\n\r\n1) `EndpointRequest.to()` has been used in a Spring Security chain configuration;\r\n\r\n2) The endpoint which `EndpointRequest` references is disabled or not exposed via web;\r\n\r\n3) Your application handles requests to `/null` and this path needs protection.\r\n\r\n## Workaround\r\n\r\nThis can be mitigated by either:\r\n\r\n1) Making sure that the endpoint to which `EndpointRequest.to()` is referring to is enabled and exposed via web;\r\n\r\n2) Make sure that you don't handle requests to `/null`.\n## Remediation\nUpgrade `org.springframework.boot:spring-boot-actuator-autoconfigure` to version 3.3.11, 3.4.5 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-boot/commit/55f67c9a522647039fd3294dee5cb83f4888160a)\n- [Spring Security Advisory](https://spring.io/security/cve-2025-22235)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-20",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 6.9,
+                "security-severity": "6.9"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "SNYK-JAVA-CHQOSLOGBACK-13169722",
+          "level": "warning",
+          "message": {
+            "text": "This file introduces a vulnerable ch.qos.logback:logback-core package with a medium severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ch.qos.logback:logback-core@1.4.14"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to ch.qos.logback:logback-core@1.5.19"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "ch.qos.logback:logback-core@1.5.19"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-CHQOSLOGBACK-15062482",
+          "level": "note",
+          "message": {
+            "text": "This file introduces a vulnerable ch.qos.logback:logback-core package with a low severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ch.qos.logback:logback-core@1.4.14"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to ch.qos.logback:logback-core@1.5.25"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "ch.qos.logback:logback-core@1.5.25"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-CHQOSLOGBACK-8539865",
+          "level": "note",
+          "message": {
+            "text": "This file introduces a vulnerable ch.qos.logback:logback-core package with a low severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ch.qos.logback:logback-core@1.4.14"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to ch.qos.logback:logback-core@1.5.13"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "ch.qos.logback:logback-core@1.5.13"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-CHQOSLOGBACK-8539866",
+          "level": "warning",
+          "message": {
+            "text": "This file introduces a vulnerable ch.qos.logback:logback-core package with a medium severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ch.qos.logback:logback-core@1.4.14"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to ch.qos.logback:logback-core@1.5.13"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "ch.qos.logback:logback-core@1.5.13"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-CHQOSLOGBACK-8539867",
+          "level": "warning",
+          "message": {
+            "text": "This file introduces a vulnerable ch.qos.logback:logback-classic package with a medium severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ch.qos.logback:logback-classic@1.4.14"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to ch.qos.logback:logback-classic@1.5.13"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "ch.qos.logback:logback-classic@1.5.13"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-10264469",
+          "level": "warning",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a medium severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.41"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.41"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-10365122",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.42"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.42"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-10365310",
+          "level": "warning",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a medium severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.42"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.42"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-10674391",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.43"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.43"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-10676855",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.43"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.43"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-11798986",
+          "level": "warning",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a medium severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.42"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.42"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-11799152",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.44"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.44"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-13723930",
+          "level": "warning",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a medium severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.47"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.47"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-13733966",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.45"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.45"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-13746602",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.42"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.42"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-15307781",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.50"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.50"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-15307822",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.52"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.52"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-15307825",
+          "level": "note",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a low severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.50"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.50"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-7430175",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.25"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.25"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-8073090",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.25"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.25"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-8383920",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a critical severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.31"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.31"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-8523186",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a critical severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.34"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.34"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-8547999",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a critical severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.34"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.34"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-9396739",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.35"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.35"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-9905132",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.40"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.40"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-9905136",
+          "level": "warning",
+          "message": {
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a medium severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.apache.tomcat.embed:tomcat-embed-core@10.1.40"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.apache.tomcat.embed:tomcat-embed-core@10.1.40"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORK-10176071",
+          "level": "note",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework:spring-context package with a low severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework:spring-context@6.1.6"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework:spring-context@6.1.20"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework:spring-context@6.1.20"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORK-8230364",
+          "level": "note",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework:spring-context package with a low severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework:spring-context@6.1.6"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework:spring-context@6.1.14"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework:spring-context@6.1.14"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORK-10345766",
+          "level": "warning",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework:spring-web package with a medium severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework:spring-web@6.1.6"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework:spring-web@6.1.21"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework:spring-web@6.1.21"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORK-7687447",
+          "level": "warning",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework:spring-web package with a medium severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework:spring-web@6.1.6"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework:spring-web@6.1.12"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework:spring-web@6.1.12"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORK-8230366",
+          "level": "note",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework:spring-web package with a low severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework:spring-web@6.1.6"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework:spring-web@6.1.14"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework:spring-web@6.1.14"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORK-12008931",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework:spring-beans package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework:spring-beans@6.1.6"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework:spring-beans@6.2.10"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework:spring-beans@6.2.10"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORK-12817817",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework:spring-core package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework:spring-core@6.1.6"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework:spring-core@6.2.11"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework:spring-core@6.2.11"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORK-8230365",
+          "level": "note",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework:spring-core package with a low severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework:spring-core@6.1.6"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework:spring-core@6.1.14"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework:spring-core@6.1.14"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORK-7945490",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework:spring-webmvc package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework:spring-webmvc@6.1.6"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework:spring-webmvc@6.1.13"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework:spring-webmvc@6.1.13"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORK-8230368",
+          "level": "note",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework:spring-webmvc package with a low severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework:spring-webmvc@6.1.6"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework:spring-webmvc@6.1.14"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework:spring-webmvc@6.1.14"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORK-8230373",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework:spring-webmvc package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework:spring-webmvc@6.1.6"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework:spring-webmvc@6.1.14"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework:spring-webmvc@6.1.14"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORKBOOT-9804539",
+          "level": "warning",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework.boot:spring-boot-actuator-autoconfigure package with a medium severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework.boot:spring-boot-actuator-autoconfigure@3.2.5"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework.boot:spring-boot-actuator-autoconfigure@3.3.11"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework.boot:spring-boot-actuator-autoconfigure@3.3.11"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "automationDetails": {
+        "id": "Snyk/Container/docker.io/alexsotoharness/tangerine-spring-boot-sample:latest://2026-02-24T01:12:02.376Z"
+      }
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "Snyk Container",
+          "semanticVersion": "1.1302.1",
+          "version": "1.1302.1",
+          "informationUri": "https://docs.snyk.io/",
+          "properties": {
+            "artifactsScanned": 0
+          },
+          "rules": []
+        }
+      },
+      "results": [],
+      "automationDetails": {
+        "id": "Snyk/Container/docker.io/alexsotoharness/tangerine-spring-boot-sample:latest:/opt/java/openjdk/lib/2026-02-24T01:12:02.377Z"
+      }
+    }
+  ]
+}
