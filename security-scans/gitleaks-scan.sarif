@@ -10,12 +10,6 @@
      "informationUri": "https://github.com/gitleaks/gitleaks",
      "rules": [
       {
-       "id": "1password-secret-key",
-       "shortDescription": {
-        "text": "Uncovered a possible 1Password secret key, potentially compromising access to secrets in vaults."
-       }
-      },
-      {
        "id": "1password-service-account-token",
        "shortDescription": {
         "text": "Uncovered a possible 1Password service account token, potentially compromising access to secrets in vaults."
@@ -52,12 +46,6 @@
        }
       },
       {
-       "id": "airtable-personnal-access-token",
-       "shortDescription": {
-        "text": "Uncovered a possible Airtable Personal AccessToken, potentially compromising database access and leading to data leakage or alteration."
-       }
-      },
-      {
        "id": "algolia-api-key",
        "shortDescription": {
         "text": "Identified an Algolia API Key, which could result in unauthorized search operations and data exposure on Algolia-managed platforms."
@@ -73,30 +61,6 @@
        "id": "alibaba-secret-key",
        "shortDescription": {
         "text": "Discovered a potential Alibaba Cloud Secret Key, potentially allowing unauthorized operations and data access within Alibaba Cloud."
-       }
-      },
-      {
-       "id": "anthropic-admin-api-key",
-       "shortDescription": {
-        "text": "Detected an Anthropic Admin API Key, risking unauthorized access to administrative functions and sensitive AI model configurations."
-       }
-      },
-      {
-       "id": "anthropic-api-key",
-       "shortDescription": {
-        "text": "Identified an Anthropic API Key, which may compromise AI assistant integrations and expose sensitive data to unauthorized access."
-       }
-      },
-      {
-       "id": "artifactory-api-key",
-       "shortDescription": {
-        "text": "Detected an Artifactory api key, posing a risk unauthorized access to the central repository."
-       }
-      },
-      {
-       "id": "artifactory-reference-token",
-       "shortDescription": {
-        "text": "Detected an Artifactory reference token, posing a risk of impersonation and unauthorized access to the central repository."
        }
       },
       {
@@ -127,18 +91,6 @@
        "id": "aws-access-token",
        "shortDescription": {
         "text": "Identified a pattern that may indicate AWS credentials, risking unauthorized cloud resource access and data breaches on AWS platforms."
-       }
-      },
-      {
-       "id": "aws-amazon-bedrock-api-key-long-lived",
-       "shortDescription": {
-        "text": "Identified a pattern that may indicate long-lived Amazon Bedrock API keys, risking unauthorized Amazon Bedrock usage"
-       }
-      },
-      {
-       "id": "aws-amazon-bedrock-api-key-short-lived",
-       "shortDescription": {
-        "text": "Identified a pattern that may indicate short-lived Amazon Bedrock API keys, risking unauthorized Amazon Bedrock usage"
        }
       },
       {
@@ -181,12 +133,6 @@
        "id": "cisco-meraki-api-key",
        "shortDescription": {
         "text": "Cisco Meraki is a cloud-managed IT solution that provides networking, security, and device management through an easy-to-use interface."
-       }
-      },
-      {
-       "id": "clickhouse-cloud-api-secret-key",
-       "shortDescription": {
-        "text": "Identified a pattern that may indicate clickhouse cloud API secret key, risking unauthorized clickhouse cloud api access and data breaches on ClickHouse Cloud platforms."
        }
       },
       {
@@ -652,12 +598,6 @@
        }
       },
       {
-       "id": "heroku-api-key-v2",
-       "shortDescription": {
-        "text": "Detected a Heroku API Key, potentially compromising cloud application deployments and operational security."
-       }
-      },
-      {
        "id": "hubspot-api-key",
        "shortDescription": {
         "text": "Found a HubSpot API Token, posing a risk to CRM data integrity and unauthorized marketing operations."
@@ -784,18 +724,6 @@
        }
       },
       {
-       "id": "looker-client-id",
-       "shortDescription": {
-        "text": "Found a Looker Client ID, risking unauthorized access to a Looker account and exposing sensitive data."
-       }
-      },
-      {
-       "id": "looker-client-secret",
-       "shortDescription": {
-        "text": "Found a Looker Client Secret, risking unauthorized access to a Looker account and exposing sensitive data."
-       }
-      },
-      {
        "id": "mailchimp-api-key",
        "shortDescription": {
         "text": "Identified a Mailchimp API key, potentially compromising email marketing campaigns and subscriber data."
@@ -886,12 +814,6 @@
        }
       },
       {
-       "id": "notion-api-token",
-       "shortDescription": {
-        "text": "Notion API token"
-       }
-      },
-      {
        "id": "npm-access-token",
        "shortDescription": {
         "text": "Uncovered an npm access token, potentially compromising package management and code repository access."
@@ -931,12 +853,6 @@
        "id": "openshift-user-token",
        "shortDescription": {
         "text": "Found an OpenShift user token, potentially compromising an OpenShift/Kubernetes cluster."
-       }
-      },
-      {
-       "id": "perplexity-api-key",
-       "shortDescription": {
-        "text": "Detected a Perplexity API key, which could lead to unauthorized access to Perplexity AI services and data exposure."
        }
       },
       {
@@ -1344,7 +1260,76 @@
      ]
     }
    },
-   "results": []
+   "results": [
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file src/main/java/com/harness/HelloController.java at commit b4145ba23ba7333a3a457b9bd1c992840809b5aa."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "src/main/java/com/harness/HelloController.java"
+        },
+        "region": {
+         "startLine": 10,
+         "startColumn": 54,
+         "endLine": 10,
+         "endColumn": 73,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "b4145ba23ba7333a3a457b9bd1c992840809b5aa",
+      "email": "alejandro.soto@harness.io",
+      "author": "alex soto",
+      "date": "2026-02-24T01:45:07Z",
+      "commitMessage": "Update fake secret to trigger Gitleaks detection, update commit message"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file src/main/java/com/harness/HelloController.java at commit 1b0193f650faabaf99c25b22ddead88437ab69e2."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "src/main/java/com/harness/HelloController.java"
+        },
+        "region": {
+         "startLine": 10,
+         "startColumn": 50,
+         "endLine": 10,
+         "endColumn": 89,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "1b0193f650faabaf99c25b22ddead88437ab69e2",
+      "email": "alejandro.soto@harness.io",
+      "author": "alex soto",
+      "date": "2026-02-24T02:05:57Z",
+      "commitMessage": "Install Gitleaks directly, add multiple fake secrets for testing"
+     },
+     "properties": {
+      "tags": []
+     }
+    }
+   ]
   }
  ]
 }
