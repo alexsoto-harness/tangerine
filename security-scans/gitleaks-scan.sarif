@@ -10,6 +10,12 @@
      "informationUri": "https://github.com/gitleaks/gitleaks",
      "rules": [
       {
+       "id": "1password-secret-key",
+       "shortDescription": {
+        "text": "Uncovered a possible 1Password secret key, potentially compromising access to secrets in vaults."
+       }
+      },
+      {
        "id": "1password-service-account-token",
        "shortDescription": {
         "text": "Uncovered a possible 1Password service account token, potentially compromising access to secrets in vaults."
@@ -46,6 +52,12 @@
        }
       },
       {
+       "id": "airtable-personnal-access-token",
+       "shortDescription": {
+        "text": "Uncovered a possible Airtable Personal AccessToken, potentially compromising database access and leading to data leakage or alteration."
+       }
+      },
+      {
        "id": "algolia-api-key",
        "shortDescription": {
         "text": "Identified an Algolia API Key, which could result in unauthorized search operations and data exposure on Algolia-managed platforms."
@@ -61,6 +73,30 @@
        "id": "alibaba-secret-key",
        "shortDescription": {
         "text": "Discovered a potential Alibaba Cloud Secret Key, potentially allowing unauthorized operations and data access within Alibaba Cloud."
+       }
+      },
+      {
+       "id": "anthropic-admin-api-key",
+       "shortDescription": {
+        "text": "Detected an Anthropic Admin API Key, risking unauthorized access to administrative functions and sensitive AI model configurations."
+       }
+      },
+      {
+       "id": "anthropic-api-key",
+       "shortDescription": {
+        "text": "Identified an Anthropic API Key, which may compromise AI assistant integrations and expose sensitive data to unauthorized access."
+       }
+      },
+      {
+       "id": "artifactory-api-key",
+       "shortDescription": {
+        "text": "Detected an Artifactory api key, posing a risk unauthorized access to the central repository."
+       }
+      },
+      {
+       "id": "artifactory-reference-token",
+       "shortDescription": {
+        "text": "Detected an Artifactory reference token, posing a risk of impersonation and unauthorized access to the central repository."
        }
       },
       {
@@ -91,6 +127,18 @@
        "id": "aws-access-token",
        "shortDescription": {
         "text": "Identified a pattern that may indicate AWS credentials, risking unauthorized cloud resource access and data breaches on AWS platforms."
+       }
+      },
+      {
+       "id": "aws-amazon-bedrock-api-key-long-lived",
+       "shortDescription": {
+        "text": "Identified a pattern that may indicate long-lived Amazon Bedrock API keys, risking unauthorized Amazon Bedrock usage"
+       }
+      },
+      {
+       "id": "aws-amazon-bedrock-api-key-short-lived",
+       "shortDescription": {
+        "text": "Identified a pattern that may indicate short-lived Amazon Bedrock API keys, risking unauthorized Amazon Bedrock usage"
        }
       },
       {
@@ -133,6 +181,12 @@
        "id": "cisco-meraki-api-key",
        "shortDescription": {
         "text": "Cisco Meraki is a cloud-managed IT solution that provides networking, security, and device management through an easy-to-use interface."
+       }
+      },
+      {
+       "id": "clickhouse-cloud-api-secret-key",
+       "shortDescription": {
+        "text": "Identified a pattern that may indicate clickhouse cloud API secret key, risking unauthorized clickhouse cloud api access and data breaches on ClickHouse Cloud platforms."
        }
       },
       {
@@ -598,6 +652,12 @@
        }
       },
       {
+       "id": "heroku-api-key-v2",
+       "shortDescription": {
+        "text": "Detected a Heroku API Key, potentially compromising cloud application deployments and operational security."
+       }
+      },
+      {
        "id": "hubspot-api-key",
        "shortDescription": {
         "text": "Found a HubSpot API Token, posing a risk to CRM data integrity and unauthorized marketing operations."
@@ -724,6 +784,18 @@
        }
       },
       {
+       "id": "looker-client-id",
+       "shortDescription": {
+        "text": "Found a Looker Client ID, risking unauthorized access to a Looker account and exposing sensitive data."
+       }
+      },
+      {
+       "id": "looker-client-secret",
+       "shortDescription": {
+        "text": "Found a Looker Client Secret, risking unauthorized access to a Looker account and exposing sensitive data."
+       }
+      },
+      {
        "id": "mailchimp-api-key",
        "shortDescription": {
         "text": "Identified a Mailchimp API key, potentially compromising email marketing campaigns and subscriber data."
@@ -814,6 +886,12 @@
        }
       },
       {
+       "id": "notion-api-token",
+       "shortDescription": {
+        "text": "Notion API token"
+       }
+      },
+      {
        "id": "npm-access-token",
        "shortDescription": {
         "text": "Uncovered an npm access token, potentially compromising package management and code repository access."
@@ -853,6 +931,12 @@
        "id": "openshift-user-token",
        "shortDescription": {
         "text": "Found an OpenShift user token, potentially compromising an OpenShift/Kubernetes cluster."
+       }
+      },
+      {
+       "id": "perplexity-api-key",
+       "shortDescription": {
+        "text": "Detected a Perplexity API key, which could lead to unauthorized access to Perplexity AI services and data exposure."
        }
       },
       {
