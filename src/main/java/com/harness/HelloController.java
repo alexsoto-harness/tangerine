@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
+    // TODO: Remove this before production - test secret for Gitleaks
+    private static final String AWS_SECRET_KEY = "AKIAIOSFODNN7EXAMPLE+wJalrXUtnFEMI/K7MDENG/bPxRfiCY";
+
     @GetMapping("/")
     public String home() {
         String projectName = "Tangerine Spring Boot Sample";

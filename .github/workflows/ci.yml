@@ -44,6 +44,23 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Run Gitleaks scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_ENABLE_COMMENTS: false
+        continue-on-error: true
+
+      - name: Export Gitleaks results to SARIF
+        run: |
+          docker run --rm -v $(pwd):/repo zricethezav/gitleaks:latest detect \
+            --source /repo \
+            --report-format sarif \
+            --report-path /repo/security-scans/gitleaks-scan.sarif \
+            --exit-code 0
 
       - name: Install Snyk CLI
         run: npm install -g snyk
