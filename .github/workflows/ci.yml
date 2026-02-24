@@ -82,7 +82,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add security-scans/
-          git diff --staged --quiet || git commit -m "Update Snyk scan results [skip ci]"
+          git diff --staged --quiet || git commit -m "Update security scan results [skip ci]"
           git push
 
 #  deploy:
