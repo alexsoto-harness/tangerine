@@ -12,12 +12,88 @@
           "properties": {
             "artifactsScanned": 77
           },
-          "rules": []
+          "rules": [
+            {
+              "id": "SNYK-ALPINE323-LIBPNG-15338641",
+              "shortDescription": {
+                "text": "High severity - Heap-based Buffer Overflow vulnerability in libpng"
+              },
+              "fullDescription": {
+                "text": "(CVE-2026-25646) libpng/libpng@1.6.54-r0"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## NVD Description\n**_Note:_** _Versions mentioned in the description apply only to the upstream `libpng` package and not the `libpng` package as distributed by `Alpine`._\n_See `How to fix?` for `Alpine:3.23` relevant fixed versions and status._\n\nLIBPNG is a reference library for use in applications that read, create, and manipulate PNG (Portable Network Graphics) raster image files. Prior to 1.6.55, an out-of-bounds read vulnerability exists in the png_set_quantize() API function. When the function is called with no histogram and the number of colors in the palette is more than twice the maximum supported by the user&#39;s display, certain palettes will cause the function to enter into an infinite loop that reads past the end of an internal heap-allocated buffer. The images that trigger this vulnerability are valid per the PNG specification. This vulnerability is fixed in 1.6.55.\n## Remediation\nUpgrade `Alpine:3.23` `libpng` to version 1.6.55-r0 or higher.\n## References\n- [https://github.com/pnggroup/libpng/commit/01d03b8453eb30ade759cd45c707e5a1c7277d88](https://github.com/pnggroup/libpng/commit/01d03b8453eb30ade759cd45c707e5a1c7277d88)\n- [http://www.openwall.com/lists/oss-security/2026/02/09/7](http://www.openwall.com/lists/oss-security/2026/02/09/7)\n- [https://github.com/pnggroup/libpng/security/advisories/GHSA-g8hp-mq4h-rqm3](https://github.com/pnggroup/libpng/security/advisories/GHSA-g8hp-mq4h-rqm3)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-122",
+                  "CWE-126",
+                  "apk"
+                ],
+                "cvssv3_baseScore": 8.1,
+                "security-severity": "8.1"
+              }
+            }
+          ]
         }
       },
-      "results": [],
+      "results": [
+        {
+          "ruleId": "SNYK-ALPINE323-LIBPNG-15338641",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable libpng package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_61a14ea/alexsotoharness/tangerine-spring-boot-sample"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "libpng@1.6.54-r0"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to libpng/libpng@1.6.55-r0"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_61a14ea/alexsotoharness/tangerine-spring-boot-sample"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "libpng/libpng@1.6.55-r0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "automationDetails": {
-        "id": "Snyk/Container/docker-image|docker.io/alexsotoharness/tangerine-spring-boot-sample/2026-02-24T02:13:46.198Z"
+        "id": "Snyk/Container/docker-image|docker.io/alexsotoharness/tangerine-spring-boot-sample/2026-02-25T19:43:49.977Z"
       }
     },
     {
@@ -2811,7 +2887,7 @@
         }
       ],
       "automationDetails": {
-        "id": "Snyk/Container/docker.io/alexsotoharness/tangerine-spring-boot-sample:latest://2026-02-24T02:13:46.199Z"
+        "id": "Snyk/Container/docker.io/alexsotoharness/tangerine-spring-boot-sample:61a14ea://2026-02-25T19:43:49.978Z"
       }
     },
     {
@@ -2829,7 +2905,7 @@
       },
       "results": [],
       "automationDetails": {
-        "id": "Snyk/Container/docker.io/alexsotoharness/tangerine-spring-boot-sample:latest:/opt/java/openjdk/lib/2026-02-24T02:13:46.199Z"
+        "id": "Snyk/Container/docker.io/alexsotoharness/tangerine-spring-boot-sample:61a14ea:/opt/java/openjdk/lib/2026-02-25T19:43:49.978Z"
       }
     }
   ]

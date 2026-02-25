@@ -1263,6 +1263,74 @@
    "results": [
     {
      "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit b5f92ed19af180799478c3767cfca314c32a4e8b."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1281,
+         "startColumn": 21,
+         "endLine": 1281,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "b5f92ed19af180799478c3767cfca314c32a4e8b",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-24T02:13:58Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit b5f92ed19af180799478c3767cfca314c32a4e8b."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1315,
+         "startColumn": 21,
+         "endLine": 1315,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "b5f92ed19af180799478c3767cfca314c32a4e8b",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-24T02:13:58Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
       "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 2f33295b88f7151decbb3ebd32b465f199edc52c."
      },
      "ruleId": "github-pat",
