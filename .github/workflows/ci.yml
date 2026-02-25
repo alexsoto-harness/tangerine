@@ -32,8 +32,9 @@ jobs:
 
       - name: Build & Push Docker image
         run: |
-          docker build -t docker.io/$DOCKERHUB_USERNAME/$PROJECT_NAME:latest .
-          docker push docker.io/$DOCKERHUB_USERNAME/$PROJECT_NAME:latest
+          SHORT_SHA=${GITHUB_SHA::7}
+          docker build -t docker.io/$DOCKERHUB_USERNAME/$PROJECT_NAME:$SHORT_SHA .
+          docker push docker.io/$DOCKERHUB_USERNAME/$PROJECT_NAME:$SHORT_SHA
 
   scan:
     runs-on: ubuntu-latest
@@ -57,14 +58,16 @@ jobs:
 
       - name: Run Snyk Docker scan and export SARIF
         run: |
-          snyk container test docker.io/$DOCKERHUB_USERNAME/$PROJECT_NAME:latest \
+          SHORT_SHA=${GITHUB_SHA::7}
+          snyk container test docker.io/$DOCKERHUB_USERNAME/$PROJECT_NAME:$SHORT_SHA \
             --org=${{ env.SNYK_ORG }} \
             --sarif-file-output=security-scans/snyk-container-scan.sarif \
             || true
 
       - name: Snyk monitor (save results to dashboard)
         run: |
-          snyk container monitor docker.io/$DOCKERHUB_USERNAME/$PROJECT_NAME:latest \
+          SHORT_SHA=${GITHUB_SHA::7}
+          snyk container monitor docker.io/$DOCKERHUB_USERNAME/$PROJECT_NAME:$SHORT_SHA \
             --org=${{ env.SNYK_ORG }}
 
       - name: Commit scan results
