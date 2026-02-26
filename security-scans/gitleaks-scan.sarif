@@ -1263,6 +1263,40 @@
    "results": [
     {
      "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1315,
+         "startColumn": 20,
+         "endLine": 1315,
+         "endColumn": 59,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
       "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
      },
      "ruleId": "github-pat",
@@ -1297,41 +1331,7 @@
     },
     {
      "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit ae9606f0d1c76597ddb2ebf9fed4508d793686cb."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1349,
-         "startColumn": 20,
-         "endLine": 1349,
-         "endColumn": 59,
-         "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "ae9606f0d1c76597ddb2ebf9fed4508d793686cb",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T03:17:49Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit ae9606f0d1c76597ddb2ebf9fed4508d793686cb."
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
      },
      "ruleId": "github-pat",
      "locations": [
@@ -1342,9 +1342,9 @@
         },
         "region": {
          "startLine": 1417,
-         "startColumn": 21,
+         "startColumn": 20,
          "endLine": 1417,
-         "endColumn": 60,
+         "endColumn": 59,
          "snippet": {
           "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
          }
@@ -1353,10 +1353,10 @@
       }
      ],
      "partialFingerprints": {
-      "commitSha": "ae9606f0d1c76597ddb2ebf9fed4508d793686cb",
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
       "email": "github-actions[bot]@users.noreply.github.com",
       "author": "github-actions[bot]",
-      "date": "2026-02-26T03:17:49Z",
+      "date": "2026-02-26T04:15:07Z",
       "commitMessage": "Update security scan results [skip ci]"
      },
      "properties": {
@@ -1365,7 +1365,7 @@
     },
     {
      "message": {
-      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit ae9606f0d1c76597ddb2ebf9fed4508d793686cb."
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
      },
      "ruleId": "aws-access-token",
      "locations": [
@@ -1376,9 +1376,9 @@
         },
         "region": {
          "startLine": 1451,
-         "startColumn": 21,
+         "startColumn": 20,
          "endLine": 1451,
-         "endColumn": 40,
+         "endColumn": 39,
          "snippet": {
           "text": "AKIAZ7FAKE9TESTKEYID"
          }
@@ -1387,44 +1387,10 @@
       }
      ],
      "partialFingerprints": {
-      "commitSha": "ae9606f0d1c76597ddb2ebf9fed4508d793686cb",
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
       "email": "github-actions[bot]@users.noreply.github.com",
       "author": "github-actions[bot]",
-      "date": "2026-02-26T03:17:49Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit ae9606f0d1c76597ddb2ebf9fed4508d793686cb."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1553,
-         "startColumn": 21,
-         "endLine": 1553,
-         "endColumn": 60,
-         "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "ae9606f0d1c76597ddb2ebf9fed4508d793686cb",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T03:17:49Z",
+      "date": "2026-02-26T04:15:07Z",
       "commitMessage": "Update security scan results [skip ci]"
      },
      "properties": {
@@ -1467,7 +1433,75 @@
     },
     {
      "message": {
-      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153."
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1519,
+         "startColumn": 20,
+         "endLine": 1519,
+         "endColumn": 59,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit ae9606f0d1c76597ddb2ebf9fed4508d793686cb."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1349,
+         "startColumn": 20,
+         "endLine": 1349,
+         "endColumn": 59,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "ae9606f0d1c76597ddb2ebf9fed4508d793686cb",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T03:17:49Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
      },
      "ruleId": "aws-access-token",
      "locations": [
@@ -1477,10 +1511,10 @@
          "uri": "security-scans/gitleaks-scan.sarif"
         },
         "region": {
-         "startLine": 1281,
-         "startColumn": 21,
-         "endLine": 1281,
-         "endColumn": 40,
+         "startLine": 1553,
+         "startColumn": 20,
+         "endLine": 1553,
+         "endColumn": 39,
          "snippet": {
           "text": "AKIAZ7FAKE9TESTKEYID"
          }
@@ -1489,10 +1523,10 @@
       }
      ],
      "partialFingerprints": {
-      "commitSha": "6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153",
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
       "email": "github-actions[bot]@users.noreply.github.com",
       "author": "github-actions[bot]",
-      "date": "2026-02-26T01:56:45Z",
+      "date": "2026-02-26T04:15:07Z",
       "commitMessage": "Update security scan results [skip ci]"
      },
      "properties": {
@@ -1527,108 +1561,6 @@
       "email": "github-actions[bot]@users.noreply.github.com",
       "author": "github-actions[bot]",
       "date": "2026-02-26T03:50:57Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153."
-     },
-     "ruleId": "aws-access-token",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1349,
-         "startColumn": 21,
-         "endLine": 1349,
-         "endColumn": 40,
-         "snippet": {
-          "text": "AKIAZ7FAKE9TESTKEYID"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T01:56:45Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153."
-     },
-     "ruleId": "aws-access-token",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1383,
-         "startColumn": 21,
-         "endLine": 1383,
-         "endColumn": 40,
-         "snippet": {
-          "text": "AKIAZ7FAKE9TESTKEYID"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T01:56:45Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit ae9606f0d1c76597ddb2ebf9fed4508d793686cb."
-     },
-     "ruleId": "aws-access-token",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1655,
-         "startColumn": 20,
-         "endLine": 1655,
-         "endColumn": 39,
-         "snippet": {
-          "text": "AKIAZ7FAKE9TESTKEYID"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "ae9606f0d1c76597ddb2ebf9fed4508d793686cb",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T03:17:49Z",
       "commitMessage": "Update security scan results [skip ci]"
      },
      "properties": {
@@ -1653,40 +1585,6 @@
          "endColumn": 39,
          "snippet": {
           "text": "AKIAZ7FAKE9TESTKEYID"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "3164df41a1dc42f021bbae68a7b6cf0a2157c3a0",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T03:50:57Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1689,
-         "startColumn": 20,
-         "endLine": 1689,
-         "endColumn": 59,
-         "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
          }
         }
        }
@@ -1739,7 +1637,7 @@
     },
     {
      "message": {
-      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
      },
      "ruleId": "aws-access-token",
      "locations": [
@@ -1749,9 +1647,43 @@
          "uri": "security-scans/gitleaks-scan.sarif"
         },
         "region": {
-         "startLine": 1757,
+         "startLine": 1621,
+         "startColumn": 20,
+         "endLine": 1621,
+         "endColumn": 39,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit f6388880296bbc4005b9cb6350b90d3d2d944540."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1281,
          "startColumn": 21,
-         "endLine": 1757,
+         "endLine": 1281,
          "endColumn": 40,
          "snippet": {
           "text": "AKIAZ7FAKE9TESTKEYID"
@@ -1761,44 +1693,10 @@
       }
      ],
      "partialFingerprints": {
-      "commitSha": "3164df41a1dc42f021bbae68a7b6cf0a2157c3a0",
+      "commitSha": "f6388880296bbc4005b9cb6350b90d3d2d944540",
       "email": "github-actions[bot]@users.noreply.github.com",
       "author": "github-actions[bot]",
-      "date": "2026-02-26T03:50:57Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1587,
-         "startColumn": 20,
-         "endLine": 1587,
-         "endColumn": 59,
-         "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T01:56:45Z",
+      "date": "2026-02-25T20:26:26Z",
       "commitMessage": "Update security scan results [skip ci]"
      },
      "properties": {
@@ -1823,6 +1721,142 @@
          "endColumn": 40,
          "snippet": {
           "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "213c04b10008a620c474ef5e4f9af876df0720fb",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T00:13:11Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1689,
+         "startColumn": 20,
+         "endLine": 1689,
+         "endColumn": 59,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "3164df41a1dc42f021bbae68a7b6cf0a2157c3a0",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T03:50:57Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1281,
+         "startColumn": 21,
+         "endLine": 1281,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T01:56:45Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1723,
+         "startColumn": 20,
+         "endLine": 1723,
+         "endColumn": 39,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 213c04b10008a620c474ef5e4f9af876df0720fb."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1485,
+         "startColumn": 21,
+         "endLine": 1485,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
          }
         }
        }
@@ -1875,9 +1909,9 @@
     },
     {
      "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 106a06eae69b3f5df251f605a8de2379c351d23a."
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153."
      },
-     "ruleId": "github-pat",
+     "ruleId": "aws-access-token",
      "locations": [
       {
        "physicalLocation": {
@@ -1885,22 +1919,56 @@
          "uri": "security-scans/gitleaks-scan.sarif"
         },
         "region": {
-         "startLine": 1281,
+         "startLine": 1349,
          "startColumn": 21,
-         "endLine": 1281,
-         "endColumn": 60,
+         "endLine": 1349,
+         "endColumn": 40,
          "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+          "text": "AKIAZ7FAKE9TESTKEYID"
          }
         }
        }
       }
      ],
      "partialFingerprints": {
-      "commitSha": "106a06eae69b3f5df251f605a8de2379c351d23a",
+      "commitSha": "6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153",
       "email": "github-actions[bot]@users.noreply.github.com",
       "author": "github-actions[bot]",
-      "date": "2026-02-25T19:44:01Z",
+      "date": "2026-02-26T01:56:45Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1383,
+         "startColumn": 21,
+         "endLine": 1383,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T01:56:45Z",
       "commitMessage": "Update security scan results [skip ci]"
      },
      "properties": {
@@ -1943,9 +2011,9 @@
     },
     {
      "message": {
-      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit f6388880296bbc4005b9cb6350b90d3d2d944540."
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 106a06eae69b3f5df251f605a8de2379c351d23a."
      },
-     "ruleId": "aws-access-token",
+     "ruleId": "github-pat",
      "locations": [
       {
        "physicalLocation": {
@@ -1956,53 +2024,19 @@
          "startLine": 1281,
          "startColumn": 21,
          "endLine": 1281,
-         "endColumn": 40,
+         "endColumn": 60,
          "snippet": {
-          "text": "AKIAZ7FAKE9TESTKEYID"
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
          }
         }
        }
       }
      ],
      "partialFingerprints": {
-      "commitSha": "f6388880296bbc4005b9cb6350b90d3d2d944540",
+      "commitSha": "106a06eae69b3f5df251f605a8de2379c351d23a",
       "email": "github-actions[bot]@users.noreply.github.com",
       "author": "github-actions[bot]",
-      "date": "2026-02-25T20:26:26Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 08d27a1c1cac3bc5d4f31ae1206a480c91820163."
-     },
-     "ruleId": "aws-access-token",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1485,
-         "startColumn": 20,
-         "endLine": 1485,
-         "endColumn": 39,
-         "snippet": {
-          "text": "AKIAZ7FAKE9TESTKEYID"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "08d27a1c1cac3bc5d4f31ae1206a480c91820163",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T00:26:16Z",
+      "date": "2026-02-25T19:44:01Z",
       "commitMessage": "Update security scan results [skip ci]"
      },
      "properties": {
@@ -2079,210 +2113,6 @@
     },
     {
      "message": {
-      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit ae9606f0d1c76597ddb2ebf9fed4508d793686cb."
-     },
-     "ruleId": "aws-access-token",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1689,
-         "startColumn": 20,
-         "endLine": 1689,
-         "endColumn": 39,
-         "snippet": {
-          "text": "AKIAZ7FAKE9TESTKEYID"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "ae9606f0d1c76597ddb2ebf9fed4508d793686cb",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T03:17:49Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153."
-     },
-     "ruleId": "aws-access-token",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1723,
-         "startColumn": 20,
-         "endLine": 1723,
-         "endColumn": 39,
-         "snippet": {
-          "text": "AKIAZ7FAKE9TESTKEYID"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T01:56:45Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1791,
-         "startColumn": 21,
-         "endLine": 1791,
-         "endColumn": 60,
-         "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T01:56:45Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1825,
-         "startColumn": 21,
-         "endLine": 1825,
-         "endColumn": 60,
-         "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T01:56:45Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1893,
-         "startColumn": 21,
-         "endLine": 1893,
-         "endColumn": 60,
-         "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T01:56:45Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 08d27a1c1cac3bc5d4f31ae1206a480c91820163."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1621,
-         "startColumn": 21,
-         "endLine": 1621,
-         "endColumn": 60,
-         "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "08d27a1c1cac3bc5d4f31ae1206a480c91820163",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T00:26:16Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
       "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 08d27a1c1cac3bc5d4f31ae1206a480c91820163."
      },
      "ruleId": "aws-access-token",
@@ -2293,90 +2123,22 @@
          "uri": "security-scans/gitleaks-scan.sarif"
         },
         "region": {
-         "startLine": 1655,
-         "startColumn": 21,
-         "endLine": 1655,
-         "endColumn": 40,
-         "snippet": {
-          "text": "AKIAZ7FAKE9TESTKEYID"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "08d27a1c1cac3bc5d4f31ae1206a480c91820163",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T00:26:16Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 08d27a1c1cac3bc5d4f31ae1206a480c91820163."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1723,
-         "startColumn": 21,
-         "endLine": 1723,
-         "endColumn": 60,
-         "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "08d27a1c1cac3bc5d4f31ae1206a480c91820163",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T00:26:16Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 213c04b10008a620c474ef5e4f9af876df0720fb."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
          "startLine": 1485,
-         "startColumn": 21,
+         "startColumn": 20,
          "endLine": 1485,
-         "endColumn": 60,
+         "endColumn": 39,
          "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+          "text": "AKIAZ7FAKE9TESTKEYID"
          }
         }
        }
       }
      ],
      "partialFingerprints": {
-      "commitSha": "213c04b10008a620c474ef5e4f9af876df0720fb",
+      "commitSha": "08d27a1c1cac3bc5d4f31ae1206a480c91820163",
       "email": "github-actions[bot]@users.noreply.github.com",
       "author": "github-actions[bot]",
-      "date": "2026-02-26T00:13:11Z",
+      "date": "2026-02-26T00:26:16Z",
       "commitMessage": "Update security scan results [skip ci]"
      },
      "properties": {
@@ -2385,9 +2147,9 @@
     },
     {
      "message": {
-      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit ae9606f0d1c76597ddb2ebf9fed4508d793686cb."
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit ae9606f0d1c76597ddb2ebf9fed4508d793686cb."
      },
-     "ruleId": "aws-access-token",
+     "ruleId": "github-pat",
      "locations": [
       {
        "physicalLocation": {
@@ -2395,12 +2157,12 @@
          "uri": "security-scans/gitleaks-scan.sarif"
         },
         "region": {
-         "startLine": 1757,
+         "startLine": 1417,
          "startColumn": 21,
-         "endLine": 1757,
-         "endColumn": 40,
+         "endLine": 1417,
+         "endColumn": 60,
          "snippet": {
-          "text": "AKIAZ7FAKE9TESTKEYID"
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
          }
         }
        }
@@ -2411,108 +2173,6 @@
       "email": "github-actions[bot]@users.noreply.github.com",
       "author": "github-actions[bot]",
       "date": "2026-02-26T03:17:49Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 213c04b10008a620c474ef5e4f9af876df0720fb."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1553,
-         "startColumn": 20,
-         "endLine": 1553,
-         "endColumn": 59,
-         "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "213c04b10008a620c474ef5e4f9af876df0720fb",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T00:13:11Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 213c04b10008a620c474ef5e4f9af876df0720fb."
-     },
-     "ruleId": "aws-access-token",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 1587,
-         "startColumn": 20,
-         "endLine": 1587,
-         "endColumn": 39,
-         "snippet": {
-          "text": "AKIAZ7FAKE9TESTKEYID"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "213c04b10008a620c474ef5e4f9af876df0720fb",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T00:13:11Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 2097,
-         "startColumn": 20,
-         "endLine": 2097,
-         "endColumn": 59,
-         "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "3164df41a1dc42f021bbae68a7b6cf0a2157c3a0",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T03:50:57Z",
       "commitMessage": "Update security scan results [skip ci]"
      },
      "properties": {
@@ -2555,7 +2215,7 @@
     },
     {
      "message": {
-      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 2f33295b88f7151decbb3ebd32b465f199edc52c."
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit ae9606f0d1c76597ddb2ebf9fed4508d793686cb."
      },
      "ruleId": "aws-access-token",
      "locations": [
@@ -2565,9 +2225,9 @@
          "uri": "security-scans/gitleaks-scan.sarif"
         },
         "region": {
-         "startLine": 1281,
+         "startLine": 1451,
          "startColumn": 21,
-         "endLine": 1281,
+         "endLine": 1451,
          "endColumn": 40,
          "snippet": {
           "text": "AKIAZ7FAKE9TESTKEYID"
@@ -2577,10 +2237,10 @@
       }
      ],
      "partialFingerprints": {
-      "commitSha": "2f33295b88f7151decbb3ebd32b465f199edc52c",
+      "commitSha": "ae9606f0d1c76597ddb2ebf9fed4508d793686cb",
       "email": "github-actions[bot]@users.noreply.github.com",
       "author": "github-actions[bot]",
-      "date": "2026-02-24T02:07:26Z",
+      "date": "2026-02-26T03:17:49Z",
       "commitMessage": "Update security scan results [skip ci]"
      },
      "properties": {
@@ -2589,7 +2249,41 @@
     },
     {
      "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 2f33295b88f7151decbb3ebd32b465f199edc52c."
+      "text": "github-pat has detected secret for file src/main/java/com/harness/HelloController.java at commit 1b0193f650faabaf99c25b22ddead88437ab69e2."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "src/main/java/com/harness/HelloController.java"
+        },
+        "region": {
+         "startLine": 10,
+         "startColumn": 50,
+         "endLine": 10,
+         "endColumn": 89,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "1b0193f650faabaf99c25b22ddead88437ab69e2",
+      "email": "alejandro.soto@harness.io",
+      "author": "alex soto",
+      "date": "2026-02-24T02:05:57Z",
+      "commitMessage": "Install Gitleaks directly, add multiple fake secrets for testing"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit ae9606f0d1c76597ddb2ebf9fed4508d793686cb."
      },
      "ruleId": "github-pat",
      "locations": [
@@ -2599,9 +2293,9 @@
          "uri": "security-scans/gitleaks-scan.sarif"
         },
         "region": {
-         "startLine": 1315,
+         "startLine": 1553,
          "startColumn": 21,
-         "endLine": 1315,
+         "endLine": 1553,
          "endColumn": 60,
          "snippet": {
           "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
@@ -2611,10 +2305,10 @@
       }
      ],
      "partialFingerprints": {
-      "commitSha": "2f33295b88f7151decbb3ebd32b465f199edc52c",
+      "commitSha": "ae9606f0d1c76597ddb2ebf9fed4508d793686cb",
       "email": "github-actions[bot]@users.noreply.github.com",
       "author": "github-actions[bot]",
-      "date": "2026-02-24T02:07:26Z",
+      "date": "2026-02-26T03:17:49Z",
       "commitMessage": "Update security scan results [skip ci]"
      },
      "properties": {
@@ -2623,7 +2317,7 @@
     },
     {
      "message": {
-      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit ae9606f0d1c76597ddb2ebf9fed4508d793686cb."
      },
      "ruleId": "aws-access-token",
      "locations": [
@@ -2633,9 +2327,77 @@
          "uri": "security-scans/gitleaks-scan.sarif"
         },
         "region": {
-         "startLine": 2199,
+         "startLine": 1655,
+         "startColumn": 20,
+         "endLine": 1655,
+         "endColumn": 39,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "ae9606f0d1c76597ddb2ebf9fed4508d793686cb",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T03:17:49Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit ae9606f0d1c76597ddb2ebf9fed4508d793686cb."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1689,
+         "startColumn": 20,
+         "endLine": 1689,
+         "endColumn": 39,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "ae9606f0d1c76597ddb2ebf9fed4508d793686cb",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T03:17:49Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit ae9606f0d1c76597ddb2ebf9fed4508d793686cb."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1757,
          "startColumn": 21,
-         "endLine": 2199,
+         "endLine": 1757,
          "endColumn": 40,
          "snippet": {
           "text": "AKIAZ7FAKE9TESTKEYID"
@@ -2645,78 +2407,10 @@
       }
      ],
      "partialFingerprints": {
-      "commitSha": "3164df41a1dc42f021bbae68a7b6cf0a2157c3a0",
+      "commitSha": "ae9606f0d1c76597ddb2ebf9fed4508d793686cb",
       "email": "github-actions[bot]@users.noreply.github.com",
       "author": "github-actions[bot]",
-      "date": "2026-02-26T03:50:57Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 2131,
-         "startColumn": 21,
-         "endLine": 2131,
-         "endColumn": 60,
-         "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "3164df41a1dc42f021bbae68a7b6cf0a2157c3a0",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T03:50:57Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 2165,
-         "startColumn": 21,
-         "endLine": 2165,
-         "endColumn": 60,
-         "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "3164df41a1dc42f021bbae68a7b6cf0a2157c3a0",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T03:50:57Z",
+      "date": "2026-02-26T03:17:49Z",
       "commitMessage": "Update security scan results [skip ci]"
      },
      "properties": {
@@ -2895,7 +2589,41 @@
     },
     {
      "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit ae9606f0d1c76597ddb2ebf9fed4508d793686cb."
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 08d27a1c1cac3bc5d4f31ae1206a480c91820163."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1655,
+         "startColumn": 21,
+         "endLine": 1655,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "08d27a1c1cac3bc5d4f31ae1206a480c91820163",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T00:26:16Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 08d27a1c1cac3bc5d4f31ae1206a480c91820163."
      },
      "ruleId": "github-pat",
      "locations": [
@@ -2905,9 +2633,77 @@
          "uri": "security-scans/gitleaks-scan.sarif"
         },
         "region": {
-         "startLine": 2131,
+         "startLine": 1621,
+         "startColumn": 21,
+         "endLine": 1621,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "08d27a1c1cac3bc5d4f31ae1206a480c91820163",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T00:26:16Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 08d27a1c1cac3bc5d4f31ae1206a480c91820163."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1723,
+         "startColumn": 21,
+         "endLine": 1723,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "08d27a1c1cac3bc5d4f31ae1206a480c91820163",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T00:26:16Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 213c04b10008a620c474ef5e4f9af876df0720fb."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1553,
          "startColumn": 20,
-         "endLine": 2131,
+         "endLine": 1553,
          "endColumn": 59,
          "snippet": {
           "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
@@ -2917,10 +2713,316 @@
       }
      ],
      "partialFingerprints": {
-      "commitSha": "ae9606f0d1c76597ddb2ebf9fed4508d793686cb",
+      "commitSha": "213c04b10008a620c474ef5e4f9af876df0720fb",
       "email": "github-actions[bot]@users.noreply.github.com",
       "author": "github-actions[bot]",
-      "date": "2026-02-26T03:17:49Z",
+      "date": "2026-02-26T00:13:11Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 213c04b10008a620c474ef5e4f9af876df0720fb."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1587,
+         "startColumn": 20,
+         "endLine": 1587,
+         "endColumn": 39,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "213c04b10008a620c474ef5e4f9af876df0720fb",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T00:13:11Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1757,
+         "startColumn": 21,
+         "endLine": 1757,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "3164df41a1dc42f021bbae68a7b6cf0a2157c3a0",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T03:50:57Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 2f33295b88f7151decbb3ebd32b465f199edc52c."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1315,
+         "startColumn": 21,
+         "endLine": 1315,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "2f33295b88f7151decbb3ebd32b465f199edc52c",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-24T02:07:26Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 2f33295b88f7151decbb3ebd32b465f199edc52c."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1281,
+         "startColumn": 21,
+         "endLine": 1281,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "2f33295b88f7151decbb3ebd32b465f199edc52c",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-24T02:07:26Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1587,
+         "startColumn": 20,
+         "endLine": 1587,
+         "endColumn": 59,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T01:56:45Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1723,
+         "startColumn": 20,
+         "endLine": 1723,
+         "endColumn": 39,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T01:56:45Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1791,
+         "startColumn": 21,
+         "endLine": 1791,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T01:56:45Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1825,
+         "startColumn": 21,
+         "endLine": 1825,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T01:56:45Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1893,
+         "startColumn": 21,
+         "endLine": 1893,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "6b02d6c11cbeb6e4fd8eb2e68041d1b8b4192153",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T01:56:45Z",
       "commitMessage": "Update security scan results [skip ci]"
      },
      "properties": {
@@ -2956,6 +3058,550 @@
       "author": "alex soto",
       "date": "2026-02-24T01:45:07Z",
       "commitMessage": "Update fake secret to trigger Gitleaks detection, update commit message"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1791,
+         "startColumn": 20,
+         "endLine": 1791,
+         "endColumn": 59,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit ae9606f0d1c76597ddb2ebf9fed4508d793686cb."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2131,
+         "startColumn": 20,
+         "endLine": 2131,
+         "endColumn": 59,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "ae9606f0d1c76597ddb2ebf9fed4508d793686cb",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T03:17:49Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1825,
+         "startColumn": 20,
+         "endLine": 1825,
+         "endColumn": 39,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1893,
+         "startColumn": 20,
+         "endLine": 1893,
+         "endColumn": 59,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 1961,
+         "startColumn": 20,
+         "endLine": 1961,
+         "endColumn": 39,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2029,
+         "startColumn": 21,
+         "endLine": 2029,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2131,
+         "startColumn": 21,
+         "endLine": 2131,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2233,
+         "startColumn": 21,
+         "endLine": 2233,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2369,
+         "startColumn": 20,
+         "endLine": 2369,
+         "endColumn": 59,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2437,
+         "startColumn": 20,
+         "endLine": 2437,
+         "endColumn": 59,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2471,
+         "startColumn": 20,
+         "endLine": 2471,
+         "endColumn": 39,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2607,
+         "startColumn": 20,
+         "endLine": 2607,
+         "endColumn": 59,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2097,
+         "startColumn": 20,
+         "endLine": 2097,
+         "endColumn": 59,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "3164df41a1dc42f021bbae68a7b6cf0a2157c3a0",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T03:50:57Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2131,
+         "startColumn": 21,
+         "endLine": 2131,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "3164df41a1dc42f021bbae68a7b6cf0a2157c3a0",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T03:50:57Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2165,
+         "startColumn": 21,
+         "endLine": 2165,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "3164df41a1dc42f021bbae68a7b6cf0a2157c3a0",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T03:50:57Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2199,
+         "startColumn": 21,
+         "endLine": 2199,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "3164df41a1dc42f021bbae68a7b6cf0a2157c3a0",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T03:50:57Z",
+      "commitMessage": "Update security scan results [skip ci]"
      },
      "properties": {
       "tags": []
@@ -3047,108 +3693,6 @@
          "endColumn": 40,
          "snippet": {
           "text": "AKIAZ7FAKE9TESTKEYID"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "3164df41a1dc42f021bbae68a7b6cf0a2157c3a0",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T03:50:57Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file src/main/java/com/harness/HelloController.java at commit 1b0193f650faabaf99c25b22ddead88437ab69e2."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "src/main/java/com/harness/HelloController.java"
-        },
-        "region": {
-         "startLine": 10,
-         "startColumn": 50,
-         "endLine": 10,
-         "endColumn": 89,
-         "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "1b0193f650faabaf99c25b22ddead88437ab69e2",
-      "email": "alejandro.soto@harness.io",
-      "author": "alex soto",
-      "date": "2026-02-24T02:05:57Z",
-      "commitMessage": "Install Gitleaks directly, add multiple fake secrets for testing"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 2573,
-         "startColumn": 21,
-         "endLine": 2573,
-         "endColumn": 60,
-         "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
-         }
-        }
-       }
-      }
-     ],
-     "partialFingerprints": {
-      "commitSha": "3164df41a1dc42f021bbae68a7b6cf0a2157c3a0",
-      "email": "github-actions[bot]@users.noreply.github.com",
-      "author": "github-actions[bot]",
-      "date": "2026-02-26T03:50:57Z",
-      "commitMessage": "Update security scan results [skip ci]"
-     },
-     "properties": {
-      "tags": []
-     }
-    },
-    {
-     "message": {
-      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
-     },
-     "ruleId": "github-pat",
-     "locations": [
-      {
-       "physicalLocation": {
-        "artifactLocation": {
-         "uri": "security-scans/gitleaks-scan.sarif"
-        },
-        "region": {
-         "startLine": 2607,
-         "startColumn": 21,
-         "endLine": 2607,
-         "endColumn": 60,
-         "snippet": {
-          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
          }
         }
        }
@@ -3269,6 +3813,74 @@
     },
     {
      "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2573,
+         "startColumn": 21,
+         "endLine": 2573,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "3164df41a1dc42f021bbae68a7b6cf0a2157c3a0",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T03:50:57Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2607,
+         "startColumn": 21,
+         "endLine": 2607,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "3164df41a1dc42f021bbae68a7b6cf0a2157c3a0",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T03:50:57Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
       "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit 3164df41a1dc42f021bbae68a7b6cf0a2157c3a0."
      },
      "ruleId": "aws-access-token",
@@ -3295,6 +3907,550 @@
       "email": "github-actions[bot]@users.noreply.github.com",
       "author": "github-actions[bot]",
       "date": "2026-02-26T03:50:57Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2777,
+         "startColumn": 21,
+         "endLine": 2777,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2845,
+         "startColumn": 21,
+         "endLine": 2845,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2879,
+         "startColumn": 21,
+         "endLine": 2879,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2743,
+         "startColumn": 21,
+         "endLine": 2743,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2811,
+         "startColumn": 21,
+         "endLine": 2811,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2913,
+         "startColumn": 21,
+         "endLine": 2913,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 2981,
+         "startColumn": 21,
+         "endLine": 2981,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 3015,
+         "startColumn": 21,
+         "endLine": 3015,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 3049,
+         "startColumn": 21,
+         "endLine": 3049,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 3185,
+         "startColumn": 21,
+         "endLine": 3185,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 3219,
+         "startColumn": 21,
+         "endLine": 3219,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 3253,
+         "startColumn": 21,
+         "endLine": 3253,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "aws-access-token has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "aws-access-token",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 3287,
+         "startColumn": 21,
+         "endLine": 3287,
+         "endColumn": 40,
+         "snippet": {
+          "text": "AKIAZ7FAKE9TESTKEYID"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 3083,
+         "startColumn": 21,
+         "endLine": 3083,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 3117,
+         "startColumn": 21,
+         "endLine": 3117,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
+      "commitMessage": "Update security scan results [skip ci]"
+     },
+     "properties": {
+      "tags": []
+     }
+    },
+    {
+     "message": {
+      "text": "github-pat has detected secret for file security-scans/gitleaks-scan.sarif at commit d17e017c6b7e22cb9562fe66d5b7673f18df9586."
+     },
+     "ruleId": "github-pat",
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "security-scans/gitleaks-scan.sarif"
+        },
+        "region": {
+         "startLine": 3151,
+         "startColumn": 21,
+         "endLine": 3151,
+         "endColumn": 60,
+         "snippet": {
+          "text": "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8"
+         }
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "commitSha": "d17e017c6b7e22cb9562fe66d5b7673f18df9586",
+      "email": "github-actions[bot]@users.noreply.github.com",
+      "author": "github-actions[bot]",
+      "date": "2026-02-26T04:15:07Z",
       "commitMessage": "Update security scan results [skip ci]"
      },
      "properties": {
