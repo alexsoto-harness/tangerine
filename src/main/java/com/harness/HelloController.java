@@ -13,21 +13,76 @@ public class HelloController {
 
     @GetMapping("/")
     public String home() {
-        String projectName = "Tangerine Spring Boot Sample";
-        String projectDescription = "A Spring Boot microservice";
-
-        return "<html>" +
+        return "<!DOCTYPE html>" +
+               "<html lang=\"en\">" +
                "<head>" +
-               "<title>Welcome to the " + projectName + " application!</title>" +
+               "<meta charset=\"UTF-8\">" +
+               "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">" +
+               "<title>Citrus Bank - Online Banking Login</title>" +
                "</head>" +
                "<body>" +
-               "<h1>Welcome to the " + projectName + " application!</h1>" +
-               "<p>This application was built and deployed with <strong>Harness</strong>.</p>" +
-               "<h2>Project Details</h2>" +
+               "<header>" +
+               "<div>" +
+               "<h1>Citrus Bank</h1>" +
+               "<p>Fresh Banking for a Brighter Future</p>" +
+               "</div>" +
+               "<nav>" +
+               "<a href=\"#\">Personal</a> | " +
+               "<a href=\"#\">Business</a> | " +
+               "<a href=\"#\">About Us</a> | " +
+               "<a href=\"#\">Contact</a>" +
+               "</nav>" +
+               "</header>" +
+               "<main>" +
+               "<section>" +
+               "<h2>Sign In to Online Banking</h2>" +
+               "<form>" +
+               "<div>" +
+               "<label for=\"clientId\">Client ID</label><br>" +
+               "<input type=\"text\" id=\"clientId\" name=\"clientId\" placeholder=\"Enter your Client ID\" required>" +
+               "</div>" +
+               "<br>" +
+               "<div>" +
+               "<label for=\"pin\">PIN</label><br>" +
+               "<input type=\"password\" id=\"pin\" name=\"pin\" placeholder=\"Enter your PIN\" required>" +
+               "</div>" +
+               "<br>" +
+               "<div>" +
+               "<input type=\"checkbox\" id=\"rememberMe\" name=\"rememberMe\">" +
+               "<label for=\"rememberMe\"> Remember my Client ID</label>" +
+               "</div>" +
+               "<br>" +
+               "<button type=\"submit\">Log In</button>" +
+               "</form>" +
+               "<p><a href=\"#\">Forgot your Client ID?</a> | <a href=\"#\">Forgot your PIN?</a></p>" +
+               "</section>" +
+               "<section>" +
+               "<h3>New to Citrus Bank?</h3>" +
+               "<p>Open an account in minutes and start enjoying:</p>" +
                "<ul>" +
-               "<li><strong>Project Name:</strong> " + projectName + "</li>" +
-               "<li><strong>Project Description:</strong> " + projectDescription + "</li>" +
+               "<li>No monthly fees on everyday banking</li>" +
+               "<li>High-interest savings accounts</li>" +
+               "<li>24/7 online and mobile banking</li>" +
+               "<li>Free e-Transfers</li>" +
                "</ul>" +
+               "<a href=\"#\">Open an Account</a>" +
+               "</section>" +
+               "<section>" +
+               "<h3>Security Notice</h3>" +
+               "<p>Citrus Bank will never ask for your full PIN or password via email or phone. " +
+               "Always ensure you are on our official website before entering your credentials.</p>" +
+               "</section>" +
+               "</main>" +
+               "<footer>" +
+               "<p>&copy; 2026 Citrus Bank. All rights reserved.</p>" +
+               "<p>This application was proudly deployed with <strong>Harness.io</strong> - The Modern Software Delivery Platform</p>" +
+               "<nav>" +
+               "<a href=\"#\">Privacy Policy</a> | " +
+               "<a href=\"#\">Terms of Service</a> | " +
+               "<a href=\"#\">Accessibility</a> | " +
+               "<a href=\"#\">Security</a>" +
+               "</nav>" +
+               "</footer>" +
                "</body>" +
                "</html>";
     }
