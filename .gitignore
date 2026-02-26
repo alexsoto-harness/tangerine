@@ -84,3 +84,7 @@ terraform/*.tfstate
 terraform/*.tfstate.*
 terraform/*.tfvars
 terraform/.terraform.lock.hcl
+
+# Cosign keys
+cosign.key
+cosign.pub

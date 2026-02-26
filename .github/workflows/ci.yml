@@ -93,9 +93,30 @@ jobs:
           git diff --staged --quiet || git commit -m "Update security scan results [skip ci]"
           git push
 
-  notify:
+  sign:
     runs-on: ubuntu-latest
     needs: scan
+    steps:
+      - name: Install cosign
+        uses: sigstore/cosign-installer@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ env.DOCKERHUB_USERNAME }}
+          password: ${{ env.DOCKERHUB_TOKEN }}
+
+      - name: Sign Docker image
+        env:
+          COSIGN_PRIVATE_KEY: ${{ secrets.COSIGN_PRIVATE_KEY }}
+          COSIGN_PASSWORD: ${{ secrets.COSIGN_PASSWORD }}
+        run: |
+          SHORT_SHA=${GITHUB_SHA::7}
+          cosign sign --key env://COSIGN_PRIVATE_KEY --yes docker.io/$DOCKERHUB_USERNAME/$PROJECT_NAME:$SHORT_SHA
+
+  notify:
+    runs-on: ubuntu-latest
+    needs: sign
     steps:
       - name: Trigger Harness Pipeline
         env:
