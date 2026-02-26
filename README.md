@@ -6,7 +6,7 @@ Welcome to your new Spring Boot application scaffolded using Cookiecutter! This 
 - A Dockerfile to containerize the app
 - Terraform scripts to provision GKE (Google Kubernetes Engine)
 - Kubernetes manifests to deploy your app
-- A GitHub Actions CI/CD pipeline for build, deploy, and GKE rollout
+- A GitHub Actions CI pipeline for build, deploy, and GKE rollout
 
 ---
 
