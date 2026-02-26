@@ -10,7 +10,7 @@ Welcome to your new Spring Boot application scaffolded using Cookiecutter! This 
 
 ---
 
-## 🔧 Customizing Your App
+## Customizing Your App
 
 ### 1. Update the Java Package & Application Code
 
