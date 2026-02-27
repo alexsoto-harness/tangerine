@@ -46,12 +46,14 @@ The pipeline (`.github/workflows/ci.yml`) runs on push to `main`:
 - `DOCKERHUB_USERNAME` - DockerHub username
 - `SNYK_ORG` - Snyk organization ID
 
-### Harness (CD)
+### Harness (CD + STO + SCS)
 
 Harness handles:
+- **Security scan ingestion via STO** - Ingests, normalizes, and aggregates security scan results (SBOM, Snyk, Gitleaks) for unified visibility and policy enforcement
 - **SLSA provenance generation and attestation**
 - **SLSA verification before deployment**
 - **Kubernetes deployment to GKE**
+
 
 ---
 
