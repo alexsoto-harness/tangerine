@@ -1,0 +1,79 @@
+pipeline:
+  name: Tangerine Artifact Signature
+  identifier: Tangerine_Artifact_Signature
+  projectIdentifier: soto_sandbox
+  orgIdentifier: sandbox
+  tags: {}
+  stages:
+    - stage:
+        name: Artifact Signing
+        identifier: Artifact_Signing
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: false
+          caching:
+            enabled: true
+            override: false
+          buildIntelligence:
+            enabled: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - parallel:
+                  - step:
+                      type: provenance
+                      name: SLSA Generation
+                      identifier: SLSA_Generation
+                      spec:
+                        source:
+                          type: docker
+                          spec:
+                            connector: dockerhubalexsotoharness
+                            repo: <+pipeline.variables.image>:<+pipeline.variables.tag>
+                        attestation:
+                          type: cosign
+                          spec:
+                            private_key: tangerine-cosign-key
+                            password: cosign-password
+                      failureStrategies:
+                        - onFailure:
+                            errors:
+                              - AllErrors
+                            action:
+                              type: Ignore
+                  - step:
+                      type: SscaArtifactSigning
+                      name: Sign Artifact
+                      identifier: Sign_Artifact
+                      spec:
+                        source:
+                          type: docker
+                          spec:
+                            connector: dockerhubalexsotoharness
+                            image: <+pipeline.variables.image>:<+pipeline.variables.tag>
+                        signing:
+                          type: cosign
+                          spec:
+                            private_key: tangerine-cosign-key
+                            password: cosign-password
+                        uploadSignature:
+                          upload: true
+                      when:
+                        stageStatus: Success
+  variables:
+    - name: image
+      type: String
+      description: ""
+      required: true
+      value: <+input>.default(alexsotoharness/tangerine-spring-boot-sample)
+    - name: tag
+      type: String
+      description: ""
+      required: true
+      value: <+input>.default(v1)
