@@ -1,0 +1,24 @@
+inputSet:
+  name: webhook input set
+  tags: {}
+  identifier: webhook_input_set
+  orgIdentifier: sandbox
+  projectIdentifier: soto_sandbox
+  pipeline:
+    identifier: tang
+    variables:
+      - name: repo_name
+        type: String
+        value: <+trigger.payload.repo_name>
+      - name: branch
+        type: String
+        value: <+trigger.payload.branch>
+      - name: image_name
+        type: String
+        value: <+trigger.payload.image_name>
+      - name: image_tag
+        type: String
+        value: <+trigger.payload.image_tag>
+      - name: repo_full_name
+        type: String
+        value: <+trigger.payload.repo_full_name>
