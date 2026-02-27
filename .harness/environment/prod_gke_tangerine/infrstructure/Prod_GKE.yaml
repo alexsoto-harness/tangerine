@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: Prod GKE
+  identifier: Prod_GKE
+  orgIdentifier: sandbox
+  projectIdentifier: soto_sandbox
+  environmentRef: Prod_GKE_Tangerine
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: org.se_sandbox_k8s
+    namespace: tangerine-prod
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
