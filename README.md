@@ -18,6 +18,7 @@ A Spring Boot reference application demonstrating a complete CI/CD pipeline with
 src/main/java/com/harness/    # Application code
 k8s/                          # Kubernetes manifests (Harness-templated)
 .github/workflows/ci.yml      # GitHub Actions CI pipeline
+.harness/                     # Harness YAML definitions 
 security-scans/               # SBOM and security scan results
 ```
 
@@ -65,6 +66,40 @@ The `k8s/` directory contains Harness-templated manifests:
 - `deployment.yaml` - Deployment with Harness expressions
 - `service.yaml` - LoadBalancer service
 - `values.yaml` - Template values using Harness expressions (e.g., `<+artifact.image>`)
+
+---
+
+## Harness Definitions (`.harness/`)
+
+The `.harness/` folder contains GitOps-managed Harness entity definitions:
+
+### Pipelines
+
+- **`pipeline/tang.yaml`** - Main CD pipeline (Tangerine Reference Architecture)
+  - Audit stage - Logs trigger payload
+  - Security scan ingestion via STO
+  - SLSA verification
+  - Deployment to GKE environments
+
+- **`pipeline/Tangerine_Artifact_Signature.yaml`** - Artifact signing pipeline
+  - SLSA provenance generation and attestation
+  - Triggered via webhook from GitHub Actions
+
+### Service
+
+- **`service/Tangerine_Sample.yaml`** - Kubernetes service definition
+  - References k8s manifests from GitHub
+  - DockerHub artifact source with pipeline variables
+
+### Environments
+
+- **`environment/mock_gke_tangerine/`** - Pre-production environment
+- **`environment/prod_gke_tangerine/`** - Production environment
+
+### Input Sets
+
+- **`inputset/webhook_input_set.yaml`** - Maps webhook payload to pipeline variables
+  - `image_name`, `image_tag`, `repo_name`, `branch`, `repo_full_name`
 
 ---
 
