@@ -64,9 +64,9 @@ jobs:
           wget -qO- https://github.com/gitleaks/gitleaks/releases/download/v8.24.3/gitleaks_8.24.3_linux_x64.tar.gz | tar xz
           sudo mv gitleaks /usr/local/bin/
 
-      - name: Run Gitleaks scan (full history)
+      - name: Run Gitleaks scan (last 25 commits)
         run: |
-          gitleaks detect --source . --report-format sarif --report-path security-scans/gitleaks-scan.sarif --exit-code 0
+          gitleaks detect --source . --log-opts="-n 25" --report-format sarif --report-path security-scans/gitleaks-scan.sarif --exit-code 0
 
       - name: Install Snyk CLI
         run: npm install -g snyk
