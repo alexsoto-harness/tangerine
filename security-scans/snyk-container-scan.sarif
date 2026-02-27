@@ -53,7 +53,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_ee11d64/alexsotoharness/tangerine-spring-boot-sample"
+                  "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_66766f2/alexsotoharness/tangerine-spring-boot-sample"
                 },
                 "region": {
                   "startLine": 1
@@ -74,7 +74,7 @@
               "artifactChanges": [
                 {
                   "artifactLocation": {
-                    "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_ee11d64/alexsotoharness/tangerine-spring-boot-sample"
+                    "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_66766f2/alexsotoharness/tangerine-spring-boot-sample"
                   },
                   "replacements": [
                     {
@@ -93,7 +93,7 @@
         }
       ],
       "automationDetails": {
-        "id": "Snyk/Container/docker-image|docker.io/alexsotoharness/tangerine-spring-boot-sample/0/2026-02-27T05:09:19.528Z"
+        "id": "Snyk/Container/docker-image|docker.io/alexsotoharness/tangerine-spring-boot-sample/0/2026-02-27T14:20:05.097Z"
       }
     },
     {
@@ -2887,7 +2887,7 @@
         }
       ],
       "automationDetails": {
-        "id": "Snyk/Container/docker.io/alexsotoharness/tangerine-spring-boot-sample:ee11d64://1/2026-02-27T05:09:19.529Z"
+        "id": "Snyk/Container/docker.io/alexsotoharness/tangerine-spring-boot-sample:66766f2://1/2026-02-27T14:20:05.097Z"
       }
     },
     {
@@ -2905,7 +2905,7 @@
       },
       "results": [],
       "automationDetails": {
-        "id": "Snyk/Container/docker.io/alexsotoharness/tangerine-spring-boot-sample:ee11d64:/opt/java/openjdk/lib/2/2026-02-27T05:09:19.529Z"
+        "id": "Snyk/Container/docker.io/alexsotoharness/tangerine-spring-boot-sample:66766f2:/opt/java/openjdk/lib/2/2026-02-27T14:20:05.098Z"
       }
     }
   ]
