@@ -18,7 +18,7 @@ A Spring Boot reference application demonstrating a complete CI/CD pipeline with
 src/main/java/com/harness/    # Application code
 k8s/                          # Kubernetes manifests (Harness-templated)
 .github/workflows/ci.yml      # GitHub Actions CI pipeline
-.harness/                     # Harness YAML definitions 
+.harness/                     # Harness YAML definitions
 security-scans/               # SBOM and security scan results
 ```
 
@@ -28,7 +28,7 @@ security-scans/               # SBOM and security scan results
 
 ### GitHub Actions (CI)
 
-The pipeline (`.github/workflows/ci.yml`) runs on push to `main`:
+The pipeline (`.github/workflows/ci.yml`) runs on pull requests to `main`:
 
 1. **Build** - Maven build, SBOM generation, Docker image push to DockerHub
 2. **Scan** - Gitleaks secret scanning, Snyk container vulnerability scan
@@ -71,7 +71,7 @@ The `k8s/` directory contains Harness-templated manifests:
 
 ## Harness Definitions (`.harness/`)
 
-The `.harness/` folder contains GitOps-managed Harness entity definitions:
+The `.harness/` folder contains Harness entity definitions:
 
 ### Pipelines
 
