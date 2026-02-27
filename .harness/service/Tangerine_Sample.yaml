@@ -1,0 +1,39 @@
+service:
+  name: Tangerine Sample
+  identifier: Tangerine_Sample
+  orgIdentifier: sandbox
+  projectIdentifier: soto_sandbox
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: templates
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: alexsotoharness
+                  gitFetchType: Branch
+                  paths:
+                    - k8s/deployment.yaml
+                    - k8s/service.yaml
+                  repoName: tangerine
+                  branch: main
+              valuesPaths:
+                - k8s/values.yaml
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+              optionalValuesYaml: false
+      artifacts:
+        primary:
+          primaryArtifactRef: Primary_Artifact
+          sources:
+            - spec:
+                connectorRef: dockerhubalexsotoharness
+                imagePath: <+pipeline.variables.image_name>
+                tag: <+pipeline.variables.image_tag>
+                digest: ""
+              identifier: Primary_Artifact
+              type: DockerRegistry
+    type: Kubernetes
