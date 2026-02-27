@@ -1,0 +1,6 @@
+environment:
+  name: Mock GKE Tangerine
+  identifier: Mock_GKE_Tangerine
+  orgIdentifier: sandbox
+  projectIdentifier: soto_sandbox
+  type: PreProduction
