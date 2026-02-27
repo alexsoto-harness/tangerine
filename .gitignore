@@ -92,3 +92,5 @@ cosign.pub
 # Project reference files
 tang-ref.html
 tang.yml
+tang-inputset.yaml
+tang-trigger.yaml
