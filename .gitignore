@@ -94,3 +94,7 @@ tang-ref.html
 tang.yml
 tang-inputset.yaml
 tang-trigger.yaml
+
+# Unused folders
+scanners/
+terraform/
