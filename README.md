@@ -1,93 +1,79 @@
-# Spring Boot Sample
+# Tangerine Spring Boot Sample
 
-Welcome to your new Spring Boot application scaffolded using Cookiecutter! This project includes:
+A Spring Boot reference application demonstrating a complete CI/CD pipeline with GitHub Actions and Harness.
 
-- A basic Spring Boot app (Java 17, Maven)
-- A Dockerfile to containerize the app
-- Terraform scripts to provision GKE (Google Kubernetes Engine)
-- Kubernetes manifests to deploy your app
-- A GitHub Actions CI pipeline for build, deploy, and GKE rollout
+## What's Included
 
----
-
-## Customizing Your App
-
-### 1. Update the Java Package & Application Code
-
-Your app starts with a simple controller located at:
-
-```
-app/src/main/java/com/spring_boot_sample/HelloController.java
-```
-
-You can:
-- Rename the package to reflect your organization (e.g., `com.myorg.myapp`)
-- Add more endpoints and services as needed
-
-If you change the package structure:
-- Update `pom.xml` or `build.gradle` with the new `groupId`
-- Move your files accordingly
+- **Spring Boot App** (Java 17, Maven)
+- **Dockerfile** for containerization
+- **Kubernetes manifests** for GKE deployment
+- **GitHub Actions CI** for build, scan, and artifact signing
+- **Harness CD** for deployment to GKE
 
 ---
 
-### 2. Customize the Dockerfile
-
-The `Dockerfile` assumes a Maven-built `.jar` located at:
+## Project Structure
 
 ```
-target/spring_boot_sample.jar
+src/main/java/com/harness/    # Application code
+k8s/                          # Kubernetes manifests (Harness-templated)
+.github/workflows/ci.yml      # GitHub Actions CI pipeline
+security-scans/               # SBOM and security scan results
 ```
-
-Ensure that the name of the JAR matches your build output, or modify the Dockerfile accordingly.
 
 ---
 
-### 3. Update Kubernetes Manifests
+## CI/CD Pipeline
 
-Kubernetes YAML files are in the `k8s/` directory:
+### GitHub Actions (CI)
 
-- `k8s/deployment.yaml`: change the container image name, labels, ports, and environment variables
-- `k8s/service.yaml`: modify the service type and ports as needed
+The pipeline (`.github/workflows/ci.yml`) runs on push to `main`:
 
-**Important:** Replace the image placeholder `gcr.io/YOUR_PROJECT_ID/spring_boot_sample:latest` with your actual GCR or Artifact Registry path.
+1. **Build** - Maven build, SBOM generation, Docker image push to DockerHub
+2. **Scan** - Gitleaks secret scanning, Snyk container vulnerability scan
+3. **Sign** - Triggers Harness signing pipeline via webhook
+4. **Notify** - Triggers Harness CD pipeline via webhook
+
+#### Required GitHub Secrets
+
+- `DOCKERHUB_TOKEN` - DockerHub access token
+- `SNYK_TOKEN` - Snyk API token
+- `HARNESS_SIGNING_WEBHOOK_URL` - Harness signing pipeline webhook
+- `HARNESS_WEBHOOK_URL` - Harness CD pipeline webhook
+
+#### Required GitHub Variables
+
+- `DOCKERHUB_USERNAME` - DockerHub username
+- `SNYK_ORG` - Snyk organization ID
+
+### Harness (CD)
+
+Harness handles:
+- **SLSA provenance generation and attestation**
+- **SLSA verification before deployment**
+- **Kubernetes deployment to GKE**
 
 ---
 
-### 4. Configure Terraform for GKE
+## Kubernetes Manifests
 
-The Terraform config in `terraform/` provisions a GKE cluster:
+The `k8s/` directory contains Harness-templated manifests:
 
-- Update `terraform/variables.tf` with your actual `project_id`, `region`, and other variables
-- If needed, modify `main.tf` to add VPC, IAM roles, or more complex infra
+- `deployment.yaml` - Deployment with Harness expressions
+- `service.yaml` - LoadBalancer service
+- `values.yaml` - Template values using Harness expressions (e.g., `<+artifact.image>`)
 
-Run Terraform with:
+---
+
+## Local Development
 
 ```bash
-cd terraform
-terraform init
-terraform plan
-terraform apply
+# Build
+mvn clean install
+
+# Run locally
+mvn spring-boot:run
+
+# Build Docker image
+docker build -t tangerine-spring-boot-sample .
 ```
-
----
-
-### 5. Configure GitHub Actions
-
-The CI/CD pipeline is located at `.github/workflows/ci.yml`.
-
-To make it work:
-- Create GitHub Secrets:
-  - `GCP_SA_KEY`: base64-encoded service account JSON with required GKE + Artifact Registry permissions
-  - `GCP_PROJECT_ID`: your Google Cloud project ID
-  - `GCP_REGION`: your desired region (e.g., `us-central1`)
-  - `GKE_CLUSTER_NAME`: your GKE cluster name
-
-The pipeline:
-- Builds the Spring Boot app
-- Builds and pushes a Docker image to GCR
-- Deploys it to GKE using `kubectl`
-
-You can extend it to include:
-- Integration tests
-- Canary rollouts
-- Slack notifications, etc.
