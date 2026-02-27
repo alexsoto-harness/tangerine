@@ -1,0 +1,8 @@
+site_name: Tangerine Sample
+site_description: A Spring Boot reference architecture demonstrating GitHub Actions and Harness CD best practices for GKE migration
+
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core
