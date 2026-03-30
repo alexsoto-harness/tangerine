@@ -144,6 +144,9 @@ pipeline:
                   timeout: 10m
         when:
           pipelineStatus: Success
+        sendGitStatus:
+          enabled: true
+          name: audit
     - stage:
         name: Secure
         identifier: sec
@@ -380,6 +383,9 @@ pipeline:
                 type: Ignore
         when:
           pipelineStatus: Success
+        sendGitStatus:
+          enabled: true
+          name: secure
     - stage:
         name: Attest
         identifier: Attest
@@ -537,6 +543,9 @@ pipeline:
                     projectKey: HD
                   timeout: 10m
         tags: {}
+        sendGitStatus:
+          enabled: true
+          name: attest
     - stage:
         name: Deploy to Mock
         identifier: Deploy_to_Mock
@@ -700,6 +709,9 @@ pipeline:
                 - AllErrors
               action:
                 type: StageRollback
+        sendGitStatus:
+          enabled: true
+          name: mock deploy
     - stage:
         name: ServiceNow Approval
         identifier: ServiceNow_Approval
@@ -755,6 +767,9 @@ pipeline:
                     retryInterval: 10s
                     ticketType: change_request
         tags: {}
+        sendGitStatus:
+          enabled: true
+          name: approve
     - stage:
         name: Deploy to Prod
         identifier: Deploy_to_Prod
@@ -1089,6 +1104,9 @@ pipeline:
                 - AllErrors
               action:
                 type: StageRollback
+        sendGitStatus:
+          enabled: true
+          name: prod deploy
   variables:
     - name: repo_name
       type: String
