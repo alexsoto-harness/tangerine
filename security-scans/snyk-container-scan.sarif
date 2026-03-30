@@ -6,13 +6,114 @@
       "tool": {
         "driver": {
           "name": "Snyk Container",
-          "semanticVersion": "1.1303.0",
-          "version": "1.1303.0",
+          "semanticVersion": "1.1303.2",
+          "version": "1.1303.2",
           "informationUri": "https://docs.snyk.io/",
           "properties": {
             "artifactsScanned": 77
           },
           "rules": [
+            {
+              "id": "SNYK-ALPINE323-EXPAT-15699600",
+              "shortDescription": {
+                "text": "Low severity - SQL Injection vulnerability in expat"
+              },
+              "fullDescription": {
+                "text": "(CVE-2026-32767) expat/libexpat@2.7.4-r0"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## NVD Description\n**_Note:_** _Versions mentioned in the description apply only to the upstream `expat` package and not the `expat` package as distributed by `Alpine`._\n_See `How to fix?` for `Alpine:3.23` relevant fixed versions and status._\n\nSiYuan is a personal knowledge management system. Versions 3.6.0 and below contain an authorization bypass vulnerability in the /api/search/fullTextSearchBlock endpoint. When the method parameter is set to 2, the endpoint passes user-supplied input directly as a raw SQL statement to the underlying SQLite database without any authorization or read-only checks. This allows any authenticated user — including those with the Reader role — to execute arbitrary SQL statements (SELECT, DELETE, UPDATE, DROP TABLE, etc.) against the application&#39;s database. This is inconsistent with the application&#39;s own security model: the dedicated SQL endpoint (/api/query/sql) correctly requires both CheckAdminRole and CheckReadonly middleware, but the search endpoint bypasses these controls entirely. This issue has been fixed in version 3.6.1.\n## Remediation\nUpgrade `Alpine:3.23` `expat` to version 2.7.5-r0 or higher.\n## References\n- [https://github.com/siyuan-note/siyuan/commit/d5e2d0bce0dffef5f61bd8066954bc2d41181fc5](https://github.com/siyuan-note/siyuan/commit/d5e2d0bce0dffef5f61bd8066954bc2d41181fc5)\n- [https://github.com/siyuan-note/siyuan/issues/17209](https://github.com/siyuan-note/siyuan/issues/17209)\n- [https://github.com/siyuan-note/siyuan/releases/tag/v3.6.1](https://github.com/siyuan-note/siyuan/releases/tag/v3.6.1)\n- [https://github.com/siyuan-note/siyuan/security/advisories/GHSA-j7wh-x834-p3r7](https://github.com/siyuan-note/siyuan/security/advisories/GHSA-j7wh-x834-p3r7)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-89",
+                  "CWE-863",
+                  "apk"
+                ],
+                "cvssv3_baseScore": null,
+                "security-severity": "null"
+              }
+            },
+            {
+              "id": "SNYK-ALPINE323-EXPAT-15699601",
+              "shortDescription": {
+                "text": "Medium severity - NULL Pointer Dereference vulnerability in expat"
+              },
+              "fullDescription": {
+                "text": "(CVE-2026-32778) expat/libexpat@2.7.4-r0"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## NVD Description\n**_Note:_** _Versions mentioned in the description apply only to the upstream `expat` package and not the `expat` package as distributed by `Alpine`._\n_See `How to fix?` for `Alpine:3.23` relevant fixed versions and status._\n\nlibexpat before 2.7.5 allows a NULL pointer dereference in the function setContext on retry after an earlier ouf-of-memory condition.\n## Remediation\nUpgrade `Alpine:3.23` `expat` to version 2.7.5-r0 or higher.\n## References\n- [https://github.com/libexpat/libexpat/pull/1159](https://github.com/libexpat/libexpat/pull/1159)\n- [https://github.com/libexpat/libexpat/pull/1163](https://github.com/libexpat/libexpat/pull/1163)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-476",
+                  "apk"
+                ],
+                "cvssv3_baseScore": 5.5,
+                "security-severity": "5.5"
+              }
+            },
+            {
+              "id": "SNYK-ALPINE323-EXPAT-15699602",
+              "shortDescription": {
+                "text": "Medium severity - Loop with Unreachable Exit Condition ('Infinite Loop') vulnerability in expat"
+              },
+              "fullDescription": {
+                "text": "(CVE-2026-32777) expat/libexpat@2.7.4-r0"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## NVD Description\n**_Note:_** _Versions mentioned in the description apply only to the upstream `expat` package and not the `expat` package as distributed by `Alpine`._\n_See `How to fix?` for `Alpine:3.23` relevant fixed versions and status._\n\nlibexpat before 2.7.5 allows an infinite loop while parsing DTD content.\n## Remediation\nUpgrade `Alpine:3.23` `expat` to version 2.7.5-r0 or higher.\n## References\n- [https://github.com/libexpat/libexpat/issues/1161](https://github.com/libexpat/libexpat/issues/1161)\n- [https://github.com/libexpat/libexpat/pull/1159](https://github.com/libexpat/libexpat/pull/1159)\n- [https://github.com/libexpat/libexpat/pull/1162](https://github.com/libexpat/libexpat/pull/1162)\n- [https://issues.oss-fuzz.com/issues/486993411](https://issues.oss-fuzz.com/issues/486993411)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-835",
+                  "apk"
+                ],
+                "cvssv3_baseScore": 5.5,
+                "security-severity": "5.5"
+              }
+            },
+            {
+              "id": "SNYK-ALPINE323-EXPAT-15725921",
+              "shortDescription": {
+                "text": "Medium severity - NULL Pointer Dereference vulnerability in expat"
+              },
+              "fullDescription": {
+                "text": "(CVE-2026-32776) expat/libexpat@2.7.4-r0"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## NVD Description\n**_Note:_** _Versions mentioned in the description apply only to the upstream `expat` package and not the `expat` package as distributed by `Alpine`._\n_See `How to fix?` for `Alpine:3.23` relevant fixed versions and status._\n\nlibexpat before 2.7.5 allows a NULL pointer dereference with empty external parameter entity content.\n## Remediation\nUpgrade `Alpine:3.23` `expat` to version 2.7.5-r0 or higher.\n## References\n- [https://github.com/libexpat/libexpat/pull/1158](https://github.com/libexpat/libexpat/pull/1158)\n- [https://github.com/libexpat/libexpat/pull/1159](https://github.com/libexpat/libexpat/pull/1159)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-476",
+                  "apk"
+                ],
+                "cvssv3_baseScore": 5.5,
+                "security-severity": "5.5"
+              }
+            },
             {
               "id": "SNYK-ALPINE323-LIBPNG-15338641",
               "shortDescription": {
@@ -38,11 +139,279 @@
                 "cvssv3_baseScore": 8.1,
                 "security-severity": "8.1"
               }
+            },
+            {
+              "id": "SNYK-ALPINE323-LIBPNG-15805091",
+              "shortDescription": {
+                "text": "Low severity - Use After Free vulnerability in libpng"
+              },
+              "fullDescription": {
+                "text": "(CVE-2026-33416) libpng/libpng@1.6.54-r0"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## NVD Description\n**_Note:_** _Versions mentioned in the description apply only to the upstream `libpng` package and not the `libpng` package as distributed by `Alpine`._\n_See `How to fix?` for `Alpine:3.23` relevant fixed versions and status._\n\nLIBPNG is a reference library for use in applications that read, create, and manipulate PNG (Portable Network Graphics) raster image files. In versions 1.2.1 through 1.6.55, `png_set_tRNS` and `png_set_PLTE` each alias a heap-allocated buffer between `png_struct` and `png_info`, sharing a single allocation across two structs with independent lifetimes. The `trans_alpha` aliasing has been present since at least libpng 1.0, and the `palette` aliasing since at least 1.2.1. Both affect all prior release lines `png_set_tRNS` sets `png_ptr-&gt;trans_alpha = info_ptr-&gt;trans_alpha` (256-byte buffer) and `png_set_PLTE` sets `info_ptr-&gt;palette = png_ptr-&gt;palette` (768-byte buffer). In both cases, calling `png_free_data` (with `PNG_FREE_TRNS` or `PNG_FREE_PLTE`) frees the buffer through `info_ptr` while the corresponding `png_ptr` pointer remains dangling. Subsequent row-transform functions dereference and, in some code paths, write to the freed memory. A second call to `png_set_tRNS` or `png_set_PLTE` has the same effect, because both functions call `png_free_data` internally before reallocating the `info_ptr` buffer. Version 1.6.56 fixes the issue.\n## Remediation\nUpgrade `Alpine:3.23` `libpng` to version 1.6.56-r0 or higher.\n## References\n- [https://github.com/pnggroup/libpng/commit/23019269764e35ed8458e517f1897bd3c54820eb](https://github.com/pnggroup/libpng/commit/23019269764e35ed8458e517f1897bd3c54820eb)\n- [https://github.com/pnggroup/libpng/commit/7ea9eea884a2328cc7fdcb3c0c00246a50d90667](https://github.com/pnggroup/libpng/commit/7ea9eea884a2328cc7fdcb3c0c00246a50d90667)\n- [https://github.com/pnggroup/libpng/commit/a3a21443ed12bfa1ef46fa0d4fb2b74a0fa34a25](https://github.com/pnggroup/libpng/commit/a3a21443ed12bfa1ef46fa0d4fb2b74a0fa34a25)\n- [https://github.com/pnggroup/libpng/commit/c1b0318b393c90679e6fa5bc1d329fd5d5012ec1](https://github.com/pnggroup/libpng/commit/c1b0318b393c90679e6fa5bc1d329fd5d5012ec1)\n- [https://github.com/pnggroup/libpng/pull/824](https://github.com/pnggroup/libpng/pull/824)\n- [https://github.com/pnggroup/libpng/security/advisories/GHSA-m4pc-p4q3-4c7j](https://github.com/pnggroup/libpng/security/advisories/GHSA-m4pc-p4q3-4c7j)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-416",
+                  "apk"
+                ],
+                "cvssv3_baseScore": null,
+                "security-severity": "null"
+              }
+            },
+            {
+              "id": "SNYK-ALPINE323-LIBPNG-15805092",
+              "shortDescription": {
+                "text": "Low severity - Out-of-bounds Read vulnerability in libpng"
+              },
+              "fullDescription": {
+                "text": "(CVE-2026-33636) libpng/libpng@1.6.54-r0"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## NVD Description\n**_Note:_** _Versions mentioned in the description apply only to the upstream `libpng` package and not the `libpng` package as distributed by `Alpine`._\n_See `How to fix?` for `Alpine:3.23` relevant fixed versions and status._\n\nLIBPNG is a reference library for use in applications that read, create, and manipulate PNG (Portable Network Graphics) raster image files. In versions 1.6.36 through 1.6.55, an out-of-bounds read and write exists in libpng&#39;s ARM/AArch64 Neon-optimized palette expansion path. When expanding 8-bit paletted rows to RGB or RGBA, the Neon loop processes a final partial chunk without verifying that enough input pixels remain. Because the implementation works backward from the end of the row, the final iteration dereferences pointers before the start of the row buffer (OOB read) and writes expanded pixel data to the same underflowed positions (OOB write). This is reachable via normal decoding of attacker-controlled PNG input if Neon is enabled. Version 1.6.56 fixes the issue.\n## Remediation\nUpgrade `Alpine:3.23` `libpng` to version 1.6.56-r0 or higher.\n## References\n- [https://github.com/pnggroup/libpng/commit/7734cda20cf1236aef60f3bbd2267c97bbb40869](https://github.com/pnggroup/libpng/commit/7734cda20cf1236aef60f3bbd2267c97bbb40869)\n- [https://github.com/pnggroup/libpng/commit/aba9f18eba870d14fb52c5ba5d73451349e339c3](https://github.com/pnggroup/libpng/commit/aba9f18eba870d14fb52c5ba5d73451349e339c3)\n- [https://github.com/pnggroup/libpng/security/advisories/GHSA-wjr5-c57x-95m2](https://github.com/pnggroup/libpng/security/advisories/GHSA-wjr5-c57x-95m2)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-125",
+                  "CWE-787",
+                  "apk"
+                ],
+                "cvssv3_baseScore": null,
+                "security-severity": "null"
+              }
+            },
+            {
+              "id": "SNYK-ALPINE323-ZLIB-15435529",
+              "shortDescription": {
+                "text": "Medium severity - Improper Validation of Specified Quantity in Input vulnerability in zlib"
+              },
+              "fullDescription": {
+                "text": "(CVE-2026-27171) zlib/zlib@1.3.1-r2"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## NVD Description\n**_Note:_** _Versions mentioned in the description apply only to the upstream `zlib` package and not the `zlib` package as distributed by `Alpine`._\n_See `How to fix?` for `Alpine:3.23` relevant fixed versions and status._\n\nzlib before 1.3.2 allows CPU consumption via crc32_combine64 and crc32_combine_gen64 because x2nmodp can do right shifts within a loop that has no termination condition.\n## Remediation\nUpgrade `Alpine:3.23` `zlib` to version 1.3.2-r0 or higher.\n## References\n- [https://7asecurity.com/blog/2026/02/zlib-7asecurity-audit/](https://7asecurity.com/blog/2026/02/zlib-7asecurity-audit/)\n- [https://github.com/madler/zlib/releases/tag/v1.3.2](https://github.com/madler/zlib/releases/tag/v1.3.2)\n- [https://ostif.org/zlib-audit-complete/](https://ostif.org/zlib-audit-complete/)\n- [https://github.com/madler/zlib/issues/904](https://github.com/madler/zlib/issues/904)\n- [https://7asecurity.com/reports/pentest-report-zlib-RC1.1.pdf](https://7asecurity.com/reports/pentest-report-zlib-RC1.1.pdf)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-1284",
+                  "apk"
+                ],
+                "cvssv3_baseScore": 5.5,
+                "security-severity": "5.5"
+              }
             }
           ]
         }
       },
       "results": [
+        {
+          "ruleId": "SNYK-ALPINE323-EXPAT-15699600",
+          "level": "note",
+          "message": {
+            "text": "This file introduces a vulnerable expat package with a low severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_045fc0b/alexsotoharness/tangerine-spring-boot-sample"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "expat@2.7.4-r0"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to expat/libexpat@2.7.5-r0"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_045fc0b/alexsotoharness/tangerine-spring-boot-sample"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "expat/libexpat@2.7.5-r0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-ALPINE323-EXPAT-15699601",
+          "level": "warning",
+          "message": {
+            "text": "This file introduces a vulnerable expat package with a medium severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_045fc0b/alexsotoharness/tangerine-spring-boot-sample"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "expat@2.7.4-r0"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to expat/libexpat@2.7.5-r0"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_045fc0b/alexsotoharness/tangerine-spring-boot-sample"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "expat/libexpat@2.7.5-r0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-ALPINE323-EXPAT-15699602",
+          "level": "warning",
+          "message": {
+            "text": "This file introduces a vulnerable expat package with a medium severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_045fc0b/alexsotoharness/tangerine-spring-boot-sample"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "expat@2.7.4-r0"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to expat/libexpat@2.7.5-r0"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_045fc0b/alexsotoharness/tangerine-spring-boot-sample"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "expat/libexpat@2.7.5-r0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-ALPINE323-EXPAT-15725921",
+          "level": "warning",
+          "message": {
+            "text": "This file introduces a vulnerable expat package with a medium severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_045fc0b/alexsotoharness/tangerine-spring-boot-sample"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "expat@2.7.4-r0"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to expat/libexpat@2.7.5-r0"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_045fc0b/alexsotoharness/tangerine-spring-boot-sample"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "expat/libexpat@2.7.5-r0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
         {
           "ruleId": "SNYK-ALPINE323-LIBPNG-15338641",
           "level": "error",
@@ -53,7 +422,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_b0b4fe4/alexsotoharness/tangerine-spring-boot-sample"
+                  "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_045fc0b/alexsotoharness/tangerine-spring-boot-sample"
                 },
                 "region": {
                   "startLine": 1
@@ -74,7 +443,7 @@
               "artifactChanges": [
                 {
                   "artifactLocation": {
-                    "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_b0b4fe4/alexsotoharness/tangerine-spring-boot-sample"
+                    "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_045fc0b/alexsotoharness/tangerine-spring-boot-sample"
                   },
                   "replacements": [
                     {
@@ -90,18 +459,162 @@
               ]
             }
           ]
+        },
+        {
+          "ruleId": "SNYK-ALPINE323-LIBPNG-15805091",
+          "level": "note",
+          "message": {
+            "text": "This file introduces a vulnerable libpng package with a low severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_045fc0b/alexsotoharness/tangerine-spring-boot-sample"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "libpng@1.6.54-r0"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to libpng/libpng@1.6.56-r0"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_045fc0b/alexsotoharness/tangerine-spring-boot-sample"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "libpng/libpng@1.6.56-r0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-ALPINE323-LIBPNG-15805092",
+          "level": "note",
+          "message": {
+            "text": "This file introduces a vulnerable libpng package with a low severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_045fc0b/alexsotoharness/tangerine-spring-boot-sample"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "libpng@1.6.54-r0"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to libpng/libpng@1.6.56-r0"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_045fc0b/alexsotoharness/tangerine-spring-boot-sample"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "libpng/libpng@1.6.56-r0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-ALPINE323-ZLIB-15435529",
+          "level": "warning",
+          "message": {
+            "text": "This file introduces a vulnerable zlib package with a medium severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_045fc0b/alexsotoharness/tangerine-spring-boot-sample"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "zlib@1.3.1-r2"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to zlib/zlib@1.3.2-r0"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "docker.io/alexsotoharness/tangerine-spring-boot-sample_045fc0b/alexsotoharness/tangerine-spring-boot-sample"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "zlib/zlib@1.3.2-r0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "automationDetails": {
-        "id": "Snyk/Container/docker-image|docker.io/alexsotoharness/tangerine-spring-boot-sample/0/2026-02-27T18:19:32.460Z"
+        "id": "Snyk/Container/docker-image|docker.io/alexsotoharness/tangerine-spring-boot-sample/0/2026-03-30T18:43:40.323Z"
       }
     },
     {
       "tool": {
         "driver": {
           "name": "Snyk Container",
-          "semanticVersion": "1.1303.0",
-          "version": "1.1303.0",
+          "semanticVersion": "1.1303.2",
+          "version": "1.1303.2",
           "informationUri": "https://docs.snyk.io/",
           "properties": {
             "artifactsScanned": 38
@@ -230,6 +743,31 @@
                 ],
                 "cvssv3_baseScore": 5.9,
                 "security-severity": "5.9"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-COMFASTERXMLJACKSONCORE-15365924",
+              "shortDescription": {
+                "text": "High severity - Allocation of Resources Without Limits or Throttling vulnerability in com.fasterxml.jackson.core:jackson-core"
+              },
+              "fullDescription": {
+                "text": "com.fasterxml.jackson.core:jackson-core@2.15.4"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[com.fasterxml.jackson.core:jackson-core](https://github.com/FasterXML/jackson-core) is a Core Jackson abstractions, basic JSON streaming API implementation\n\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling in which the non-blocking async JSON parser can be made to bypass the `maxNumberLength` constraint (default: 1000 characters) defined in `StreamReadConstraints`. An attacker can cause excessive memory allocation and CPU exhaustion by submitting JSON documents containing extremely long numeric values through the asynchronous parser interface.\n## PoC\nThe following JUnit 5 test demonstrates the vulnerability. It shows that the async parser accepts a 5,000-digit number, whereas the limit should be 1,000.\r\n\r\n``` js\r\npackage tools.jackson.core.unittest.dos;\r\n\r\nimport java.nio.charset.StandardCharsets;\r\n\r\nimport org.junit.jupiter.api.Test;\r\n\r\nimport tools.jackson.core.*;\r\nimport tools.jackson.core.exc.StreamConstraintsException;\r\nimport tools.jackson.core.json.JsonFactory;\r\nimport tools.jackson.core.json.async.NonBlockingByteArrayJsonParser;\r\n\r\nimport static org.junit.jupiter.api.Assertions.*;\r\n\r\n/**\r\n * POC: Number Length Constraint Bypass in Non-Blocking (Async) JSON Parsers\r\n *\r\n * Authors: sprabhav7, rohan-repos\r\n * \r\n * maxNumberLength default = 1000 characters (digits).\r\n * A number with more than 1000 digits should be rejected by any parser.\r\n *\r\n * BUG: The async parser never calls resetInt()/resetFloat() which is where\r\n * validateIntegerLength()/validateFPLength() lives. Instead it calls\r\n * _valueComplete() which skips all number length validation.\r\n *\r\n * CWE-770: Allocation of Resources Without Limits or Throttling\r\n */\r\nclass AsyncParserNumberLengthBypassTest {\r\n\r\n    private static final int MAX_NUMBER_LENGTH = 1000;\r\n    private static final int TEST_NUMBER_LENGTH = 5000;\r\n\r\n    private final JsonFactory factory = new JsonFactory();\r\n\r\n    // CONTROL: Sync parser correctly rejects a number exceeding maxNumberLength\r\n    @Test\r\n    void syncParserRejectsLongNumber() throws Exception {\r\n        byte[] payload = buildPayloadWithLongInteger(TEST_NUMBER_LENGTH);\r\n\t\t\r\n\t\t// Output to console\r\n        System.out.println(\"[SYNC] Parsing \" + TEST_NUMBER_LENGTH + \"-digit number (limit: \" + MAX_NUMBER_LENGTH + \")\");\r\n        try {\r\n            try (JsonParser p = factory.createParser(ObjectReadContext.empty(), payload)) {\r\n                while (p.nextToken() != null) {\r\n                    if (p.currentToken() == JsonToken.VALUE_NUMBER_INT) {\r\n                        System.out.println(\"[SYNC] Accepted number with \" + p.getText().length() + \" digits — UNEXPECTED\");\r\n                    }\r\n                }\r\n            }\r\n            fail(\"Sync parser must reject a \" + TEST_NUMBER_LENGTH + \"-digit number\");\r\n        } catch (StreamConstraintsException e) {\r\n            System.out.println(\"[SYNC] Rejected with StreamConstraintsException: \" + e.getMessage());\r\n        }\r\n    }\r\n\r\n    // VULNERABILITY: Async parser accepts the SAME number that sync rejects\r\n    @Test\r\n    void asyncParserAcceptsLongNumber() throws Exception {\r\n        byte[] payload = buildPayloadWithLongInteger(TEST_NUMBER_LENGTH);\r\n\r\n        NonBlockingByteArrayJsonParser p =\r\n            (NonBlockingByteArrayJsonParser) factory.createNonBlockingByteArrayParser(ObjectReadContext.empty());\r\n        p.feedInput(payload, 0, payload.length);\r\n        p.endOfInput();\r\n\r\n        boolean foundNumber = false;\r\n        try {\r\n            while (p.nextToken() != null) {\r\n                if (p.currentToken() == JsonToken.VALUE_NUMBER_INT) {\r\n                    foundNumber = true;\r\n                    String numberText = p.getText();\r\n                    assertEquals(TEST_NUMBER_LENGTH, numberText.length(),\r\n                        \"Async parser silently accepted all \" + TEST_NUMBER_LENGTH + \" digits\");\r\n                }\r\n            }\r\n            // Output to console\r\n            System.out.println(\"[ASYNC INT] Accepted number with \" + TEST_NUMBER_LENGTH + \" digits — BUG CONFIRMED\");\r\n            assertTrue(foundNumber, \"Parser should have produced a VALUE_NUMBER_INT token\");\r\n        } catch (StreamConstraintsException e) {\r\n            fail(\"Bug is fixed — async parser now correctly rejects long numbers: \" + e.getMessage());\r\n        }\r\n        p.close();\r\n    }\r\n\r\n    private byte[] buildPayloadWithLongInteger(int numDigits) {\r\n        StringBuilder sb = new StringBuilder(numDigits + 10);\r\n        sb.append(\"{\\\"v\\\":\");\r\n        for (int i = 0; i < numDigits; i++) {\r\n            sb.append((char) ('1' + (i % 9)));\r\n        }\r\n        sb.append('}');\r\n        return sb.toString().getBytes(StandardCharsets.UTF_8);\r\n    }\r\n}\r\n```\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](https://security.snyk.io/vuln/SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `com.fasterxml.jackson.core:jackson-core` to version 2.18.6, 2.21.1 or higher.\n## References\n- [GitHub Advisory](https://github.com/FasterXML/jackson-core/security/advisories/GHSA-72hv-8253-57qq)\n- [GitHub Commit](https://github.com/FasterXML/jackson-core/commit/b0c428e6f993e1b5ece5c1c3cb2523e887cd52cf)\n- [GitHub PR](https://github.com/FasterXML/jackson-core/pull/1555)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-770",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 8.7,
+                "security-severity": "8.7"
               }
             },
             {
@@ -485,7 +1023,7 @@
             {
               "id": "SNYK-JAVA-ORGAPACHETOMCATEMBED-15307781",
               "shortDescription": {
-                "text": "High severity - Improper Certificate Validation vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
+                "text": "Critical severity - Improper Certificate Validation vulnerability in org.apache.tomcat.embed:tomcat-embed-core"
               },
               "fullDescription": {
                 "text": "(CVE-2025-66614) org.apache.tomcat.embed:tomcat-embed-core@10.1.20"
@@ -503,8 +1041,8 @@
                   "CWE-295",
                   "maven"
                 ],
-                "cvssv3_baseScore": 7.6,
-                "security-severity": "7.6"
+                "cvssv3_baseScore": 9.1,
+                "security-severity": "9.1"
               }
             },
             {
@@ -528,8 +1066,8 @@
                   "CWE-863",
                   "maven"
                 ],
-                "cvssv3_baseScore": 7.1,
-                "security-severity": "7.1"
+                "cvssv3_baseScore": 8.7,
+                "security-severity": "8.7"
               }
             },
             {
@@ -833,6 +1371,31 @@
               }
             },
             {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORK-15701755",
+              "shortDescription": {
+                "text": "Low severity - Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection') vulnerability in org.springframework:spring-web"
+              },
+              "fullDescription": {
+                "text": "(CVE-2026-22735) org.springframework:spring-web@6.1.6"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.springframework:spring-web](https://github.com/spring-projects/spring-framework) is a package that provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform.\n\nAffected versions of this package are vulnerable to Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection'). The vulnerability exists in the handling of Server-Sent Events (SSE) when streaming plain text data. An attacker can inject crafted data into the event stream, breaking message boundaries and corrupting the stream delivered to other clients. By controlling streamed content, an attacker can manipulate how subsequent events are parsed by the client, potentially altering application state or injecting misleading data.\n\n**Note:**\n\nThis is only exploitable if the application streams attacker-controlled data via SSE using unstructured/plain-text messages instead of a structured format (e.g., JSON).\n## Remediation\nUpgrade `org.springframework:spring-web` to version 6.2.17, 7.0.6 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-framework/commit/8dc888e1b8190da93d0864c437ae945eaf06a8e9)\n- [Spring Advisory](https://spring.io/security/cve-2026-22735)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-74",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 2.1,
+                "security-severity": "2.1"
+              }
+            },
+            {
               "id": "SNYK-JAVA-ORGSPRINGFRAMEWORK-7687447",
               "shortDescription": {
                 "text": "Medium severity - Denial of Service (DoS) vulnerability in org.springframework:spring-web"
@@ -958,6 +1521,56 @@
               }
             },
             {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORK-15701756",
+              "shortDescription": {
+                "text": "Low severity - Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection') vulnerability in org.springframework:spring-webmvc"
+              },
+              "fullDescription": {
+                "text": "(CVE-2026-22735) org.springframework:spring-webmvc@6.1.6"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.springframework:spring-webmvc](https://mvnrepository.com/artifact/org.springframework/spring-webmvc) is a package that provides Model-View-Controller (MVC) architecture and ready components that can be used to develop flexible and loosely coupled web applications.\n\nAffected versions of this package are vulnerable to Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection'). The vulnerability exists in the handling of Server-Sent Events (SSE) when streaming plain text data. An attacker can inject crafted data into the event stream, breaking message boundaries and corrupting the stream delivered to other clients. By controlling streamed content, an attacker can manipulate how subsequent events are parsed by the client, potentially altering application state or injecting misleading data.\n\n**Note:**\n\nThis is only exploitable if the application streams attacker-controlled data via SSE using unstructured/plain-text messages instead of a structured format (e.g., JSON).\n## Remediation\nUpgrade `org.springframework:spring-webmvc` to version 6.2.17, 7.0.6 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-framework/commit/8dc888e1b8190da93d0864c437ae945eaf06a8e9)\n- [Spring Advisory](https://spring.io/security/cve-2026-22735)\n"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-74",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 2.1,
+                "security-severity": "2.1"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORK-15701845",
+              "shortDescription": {
+                "text": "High severity - Directory Traversal vulnerability in org.springframework:spring-webmvc"
+              },
+              "fullDescription": {
+                "text": "(CVE-2026-22737) org.springframework:spring-webmvc@6.1.6"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n[org.springframework:spring-webmvc](https://mvnrepository.com/artifact/org.springframework/spring-webmvc) is a package that provides Model-View-Controller (MVC) architecture and ready components that can be used to develop flexible and loosely coupled web applications.\n\nAffected versions of this package are vulnerable to Directory Traversal via the Script View Templates. An attacker can access sensitive file contents outside of the intended directories by leveraging the Java scripting engine in template rendering.\n\n**Note:**\n\nThis is only exploitable if the application has a mapping for `\"/**\"` that results in view rendering, and where the view name is not explicitly specified.\n\n## Details\n\nA Directory Traversal attack (also known as path traversal) aims to access files and directories that are stored outside the intended folder. By manipulating files with \"dot-dot-slash (../)\" sequences and its variations, or by using absolute file paths, it may be possible to access arbitrary files and directories stored on file system, including application source code, configuration, and other critical system files.\n\nDirectory Traversal vulnerabilities can be generally divided into two types:\n\n- **Information Disclosure**: Allows the attacker to gain information about the folder structure or read the contents of sensitive files on the system.\n\n`st` is a module for serving static files on web pages, and contains a [vulnerability of this type](https://snyk.io/vuln/npm:st:20140206). In our example, we will serve files from the `public` route.\n\nIf an attacker requests the following URL from our server, it will in turn leak the sensitive private key of the root user.\n\n```\ncurl http://localhost:8080/public/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/root/.ssh/id_rsa\n```\n**Note** `%2e` is the URL encoded version of `.` (dot).\n\n- **Writing arbitrary files**: Allows the attacker to create or replace existing files. This type of vulnerability is also known as `Zip-Slip`. \n\nOne way to achieve this is by using a malicious `zip` archive that holds path traversal filenames. When each filename in the zip archive gets concatenated to the target extraction folder, without validation, the final path ends up outside of the target folder. If an executable or a configuration file is overwritten with a file containing malicious code, the problem can turn into an arbitrary code execution issue quite easily.\n\nThe following is an example of a `zip` archive with one benign file and one malicious file. Extracting the malicious file will result in traversing out of the target folder, ending up in `/root/.ssh/` overwriting the `authorized_keys` file:\n\n```\n2018-04-15 22:04:29 .....           19           19  good.txt\n2018-04-15 22:04:42 .....           20           20  ../../../../../../root/.ssh/authorized_keys\n```\n\n## Remediation\nUpgrade `org.springframework:spring-webmvc` to version 6.2.17, 7.0.6 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-framework/commit/317a1f9909a2394a5a1b03e5e17deb25066fbaf6)\n- [Spring Advisory](https://spring.io/security/cve-2026-22737)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-22",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 8.2,
+                "security-severity": "8.2"
+              }
+            },
+            {
               "id": "SNYK-JAVA-ORGSPRINGFRAMEWORK-7945490",
               "shortDescription": {
                 "text": "High severity - Path Traversal vulnerability in org.springframework:spring-webmvc"
@@ -1033,6 +1646,31 @@
               }
             },
             {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORKBOOT-15701835",
+              "shortDescription": {
+                "text": "High severity - Authentication Bypass Using an Alternate Path or Channel vulnerability in org.springframework.boot:spring-boot-actuator-autoconfigure"
+              },
+              "fullDescription": {
+                "text": "(CVE-2026-22733) org.springframework.boot:spring-boot-actuator-autoconfigure@3.2.5"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n\nAffected versions of this package are vulnerable to Authentication Bypass Using an Alternate Path or Channel via the Actuator CloudFoundry endpoints. An attacker can gain unauthorized access to protected endpoints by sending requests to application endpoints declared under the CloudFoundry Actuator path.\r\n\r\n**Note:**\r\n\r\nThis is only exploitable if all of the following conditions are met:\r\n\r\n- the application is a web application\r\n\r\n- the application contributes an application endpoint that requires authentication under a subpath, like `\"/cloudfoundryapplication/admin\"`\n## Remediation\nUpgrade `org.springframework.boot:spring-boot-actuator-autoconfigure` to version 3.5.12, 4.0.4 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-boot/commit/01fbede2b27237616e215fe0df7c294ae47bdd73)\n- [Spring Advisory](https://spring.io/security/cve-2026-22733)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-288",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 8.3,
+                "security-severity": "8.3"
+              }
+            },
+            {
               "id": "SNYK-JAVA-ORGSPRINGFRAMEWORKBOOT-9804539",
               "shortDescription": {
                 "text": "Medium severity - Improper Input Validation vulnerability in org.springframework.boot:spring-boot-actuator-autoconfigure"
@@ -1055,6 +1693,31 @@
                 ],
                 "cvssv3_baseScore": 6.9,
                 "security-severity": "6.9"
+              }
+            },
+            {
+              "id": "SNYK-JAVA-ORGSPRINGFRAMEWORKBOOT-15701836",
+              "shortDescription": {
+                "text": "High severity - Authentication Bypass Using an Alternate Path or Channel vulnerability in org.springframework.boot:spring-boot-actuator"
+              },
+              "fullDescription": {
+                "text": "(CVE-2026-22733) org.springframework.boot:spring-boot-actuator@3.2.5"
+              },
+              "help": {
+                "text": "",
+                "markdown": "## Overview\n\nAffected versions of this package are vulnerable to Authentication Bypass Using an Alternate Path or Channel via the Actuator CloudFoundry endpoints. An attacker can gain unauthorized access to protected endpoints by sending requests to application endpoints declared under the CloudFoundry Actuator path.\r\n\r\n**Note:**\r\n\r\nThis is only exploitable if all of the following conditions are met:\r\n\r\n- the application is a web application\r\n\r\n- the application contributes an application endpoint that requires authentication under a subpath, like `\"/cloudfoundryapplication/admin\"`\n## Remediation\nUpgrade `org.springframework.boot:spring-boot-actuator` to version 3.5.12, 4.0.4 or higher.\n## References\n- [GitHub Commit](https://github.com/spring-projects/spring-boot/commit/01fbede2b27237616e215fe0df7c294ae47bdd73)\n- [Spring Advisory](https://spring.io/security/cve-2026-22733)\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "CWE-288",
+                  "maven"
+                ],
+                "cvssv3_baseScore": 8.3,
+                "security-severity": "8.3"
               }
             }
           ]
@@ -1293,6 +1956,54 @@
                       },
                       "insertedContent": {
                         "text": "ch.qos.logback:logback-classic@1.5.13"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-COMFASTERXMLJACKSONCORE-15365924",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable com.fasterxml.jackson.core:jackson-core package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "com.fasterxml.jackson.core:jackson-core@2.15.4"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to com.fasterxml.jackson.core:jackson-core@2.18.6"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "com.fasterxml.jackson.core:jackson-core@2.18.6"
                       }
                     }
                   ]
@@ -1785,7 +2496,7 @@
           "ruleId": "SNYK-JAVA-ORGAPACHETOMCATEMBED-15307781",
           "level": "error",
           "message": {
-            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a high severity vulnerability."
+            "text": "This file introduces a vulnerable org.apache.tomcat.embed:tomcat-embed-core package with a critical severity vulnerability."
           },
           "locations": [
             {
@@ -2454,6 +3165,54 @@
           ]
         },
         {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORK-15701755",
+          "level": "note",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework:spring-web package with a low severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework:spring-web@6.1.6"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework:spring-web@6.2.17"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework:spring-web@6.2.17"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORK-7687447",
           "level": "warning",
           "message": {
@@ -2694,6 +3453,102 @@
           ]
         },
         {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORK-15701756",
+          "level": "note",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework:spring-webmvc package with a low severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework:spring-webmvc@6.1.6"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework:spring-webmvc@6.2.17"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework:spring-webmvc@6.2.17"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORK-15701845",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework:spring-webmvc package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework:spring-webmvc@6.1.6"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework:spring-webmvc@6.2.17"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework:spring-webmvc@6.2.17"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORK-7945490",
           "level": "error",
           "message": {
@@ -2838,6 +3693,54 @@
           ]
         },
         {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORKBOOT-15701835",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework.boot:spring-boot-actuator-autoconfigure package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework.boot:spring-boot-actuator-autoconfigure@3.2.5"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework.boot:spring-boot-actuator-autoconfigure@3.5.12"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework.boot:spring-boot-actuator-autoconfigure@3.5.12"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORKBOOT-9804539",
           "level": "warning",
           "message": {
@@ -2884,18 +3787,66 @@
               ]
             }
           ]
+        },
+        {
+          "ruleId": "SNYK-JAVA-ORGSPRINGFRAMEWORKBOOT-15701836",
+          "level": "error",
+          "message": {
+            "text": "This file introduces a vulnerable org.springframework.boot:spring-boot-actuator package with a high severity vulnerability."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "org.springframework.boot:spring-boot-actuator@3.2.5"
+                }
+              ]
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "Upgrade to org.springframework.boot:spring-boot-actuator@3.5.12"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "/"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "startLine": 1
+                      },
+                      "insertedContent": {
+                        "text": "org.springframework.boot:spring-boot-actuator@3.5.12"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "automationDetails": {
-        "id": "Snyk/Container/docker.io/alexsotoharness/tangerine-spring-boot-sample:b0b4fe4://1/2026-02-27T18:19:32.461Z"
+        "id": "Snyk/Container/docker.io/alexsotoharness/tangerine-spring-boot-sample:045fc0b://1/2026-03-30T18:43:40.324Z"
       }
     },
     {
       "tool": {
         "driver": {
           "name": "Snyk Container",
-          "semanticVersion": "1.1303.0",
-          "version": "1.1303.0",
+          "semanticVersion": "1.1303.2",
+          "version": "1.1303.2",
           "informationUri": "https://docs.snyk.io/",
           "properties": {
             "artifactsScanned": 0
@@ -2905,7 +3856,7 @@
       },
       "results": [],
       "automationDetails": {
-        "id": "Snyk/Container/docker.io/alexsotoharness/tangerine-spring-boot-sample:b0b4fe4:/opt/java/openjdk/lib/2/2026-02-27T18:19:32.461Z"
+        "id": "Snyk/Container/docker.io/alexsotoharness/tangerine-spring-boot-sample:045fc0b:/opt/java/openjdk/lib/2/2026-03-30T18:43:40.324Z"
       }
     }
   ]
