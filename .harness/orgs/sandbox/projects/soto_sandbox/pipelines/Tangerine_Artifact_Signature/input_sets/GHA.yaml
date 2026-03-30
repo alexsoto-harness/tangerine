@@ -1,0 +1,14 @@
+inputSet:
+  name: GHA
+  identifier: GHA
+  orgIdentifier: sandbox
+  projectIdentifier: soto_sandbox
+  pipeline:
+    identifier: Tangerine_Artifact_Signature
+    variables:
+      - name: image
+        type: String
+        value: alexsotoharness/tangerine-spring-boot-sample
+      - name: tag
+        type: String
+        value: v1
