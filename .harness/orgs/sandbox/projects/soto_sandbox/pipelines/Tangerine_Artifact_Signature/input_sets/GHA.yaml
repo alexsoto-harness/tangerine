@@ -1,5 +1,6 @@
 inputSet:
-  name: GHA
+  name: GHA on push to main
+  tags: {}
   identifier: GHA
   orgIdentifier: sandbox
   projectIdentifier: soto_sandbox
@@ -8,7 +9,7 @@ inputSet:
     variables:
       - name: image
         type: String
-        value: alexsotoharness/tangerine-spring-boot-sample
+        value: <+trigger.image_name>
       - name: tag
         type: String
-        value: v1
+        value: <+trigger.image_tag>
